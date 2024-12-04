@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BETAWI MUDA FARM</title>
+    <link rel="icon" href="asset/Betawi Muda.png"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" >
+  
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
+
+</head>
+<body class="bg-gradient-to-b from-green-50 via-green-100 to-green-100 min-h-screen text-white">
+    <nav>
+        <div class="menu">
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#aboutus" >About Us</a></li>
+            <li><a href="#product" >Product</a></li>
+            <li><a href="#gallery" >Gallery</a></li>
+            <li><a href="#blog"    >Blog</a></li>
+            <li><a href="#contact" >Contact</a></li>
+            
+
+        </ul>
+        <ul>
+          <ul>
+            <li class="logo flex items-center text-2xl sm:text-base md:text-xl lg:text-2xl">
+              <a href="#" class="flex items-center text-white">
+                <!-- Logo Image -->
+                <img src="asset/Betawi Muda.png" alt="BETAWI MUDA FARM" class="w-auto h-12 sm:h-8 md:h-10 lg:h-12 mr-2">
+                <!-- Logo Text -->
+                <span class="text-xs sm:text-xs md:text-sm lg:text-base">BETAWI MUDA FARM</span>
+              </a>
+            </li>
+            <li class="hideOnMobile"><a href="#aboutus" class="text-white  hover:text-lime-800 transition rounded-full">About Us</a></li>
+            <li class="hideOnMobile"><a href="#product" class="text-white  hover:text-lime-800 transition rounded-full">Product</a></li>
+            <li class="hideOnMobile"><a href="#gallery" class="text-white  hover:text-lime-800 transition rounded-full">Gallery</a></li>
+            <li class="hideOnMobile"><a href="#blog"    class="text-white  hover:text-lime-800 transition rounded-full">Blog</a></li>
+            <li class="hideOnMobile"><a href="#contact" class="text-white  hover:text-lime-800 transition rounded-full">Contact</a></li>
+            
+            <li class="menu-button" onclick="showSidebar()"><a href="#"><svg height="26px" viewBox="0 -960 960 960" width="26px" fill="#ffffff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+        </ul>
+    </div>
+        </nav>
+    <div class="container mx-auto px-4 pt-20 ">
+      <header class="relative w-full max-w-3xl mx-auto mb-8" id="logo">
+        <!-- YouTube Video with Border -->
+        <div class="relative w-full pt-[56.25%] border-8 border-[#2a431b] rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 sm:border-8 sm:border-[#2a431b] md:border-4 md:border-[#2a431b]">
+          <!-- Gradient Border Overlay for a more colorful effect -->
+          <!-- <div class="absolute top-0 left-0 w-full h-full rounded-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 opacity-50 z-10"></div> -->
+            
+            <!-- sesudah autoplay -->
+          <iframe src="https://www.youtube.com/embed/TUxzypMgl0Y?autoplay=1&mute=1&loop=1&playlist=TUxzypMgl0Y" frameborder="0" allowfullscreen
+          class="absolute top-0 left-0 w-full h-full rounded-xl z-20"></iframe>
+
+        </div>
+      </header>
+    </div>
+    
+      <!-- Intro Section below the iframe -->
+      <div class="intro text-center z-10 text-lime-950 pb-12 pt-5 bg-gradient-to-b from-green-100 via-green-150 to-lime-800">
+        <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">BETAWI MUDA FARM</h3>
+        <p class="mb-4 text-lg">Membangun sektor pertanian dan peternakan bersama generasi muda Indonesia</p>
+        <p>
+          <a href="#product" class="tombol border-4 border-lime-950 text-2xl text-lime-950 py-3 px-8 rounded-md text-lg hover:bg-lime-50 hover:text-lime-950 transition duration-300">Shop Now</a>
+        </p>
+      </div>
+    </div>
+    
+
+    <main>
+
+      <section id="aboutus" class="bg-gradient-to-b from-lime-800 via-lime-900 to-lime-950 py-12 ">
+        <div class="layar-dalam">
+          <h3 class="text-4xl text-center mb-6 text-green-50 font-semibold relative">
+            About Us
+            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 border-b-4 border-green-50 w-24 mt-8"></span>
+          </h3>
+          
+          <p class="ringkasan italic text-lime-200 text-lg px-24 py-8 text-center">
+            Membangun sektor pertanian dan peternakan bersama generasi muda Indonesia
+          </p>
+          
+          <div class="konten-isi">
+            <p class="text-20px leading-relaxed text-justify text-white px-6 sm:px-8 md:px-12">
+              Betawi Muda Farm merupakan wadah yang dimana generasi muda dapat berkembang dan berkreasi dalam sektor pertanian maupun peternakan. 
+              Dengan mengembangkan semangat jiwa generasi muda pada sektor Agrikultur yang sangat luas di Indonesia ini dan memanfaatkan setiap potensi yang bisa dikembangkan di Indonesia. 
+              Betawi Muda farm juga bukan hanya memberikan informasi tentang agrikultur, kami juga menyediakan layanan, alat maupun jasa untuk membuat kebun anda menjadi lebih maju dan efisien 
+              dengan kecerdasan Buatan atau IOT (INTERNET OF THINGS).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="product" class="bg-green-950 pt-16">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <h3 class="text-4xl text-center mb-6 text-green-50 font-semibold relative">
+                Product
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 border-b-4  border-green-50 w-14 mt-4"></span>
+            </h3>
+
+            <!-- Container for horizontal scrolling -->
+            <div class="relative">
+            
+                
+                <!-- Product Grid with horizontal layout -->
+                <div id="productGrid" class="flex overflow-x-auto gap-8 pb-8">
+                    <!-- Product 1 -->
+                    <div class="relative bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform flex-none w-72">
+                      <img src="asset/DRONE.jpg" alt="Mengapa Bertani?" class="w-full h-40 object-cover rounded mb-4">
+                      <h6 class="text-xl font-semibold mb-2 text-gray-800 hover:text-gray-600">DRONE PERTANIAN</h6>
+                      <p class="text-lime-950 text-xs md:text-base lg:text-sm leading-relaxed mb-4">
+                          Drone pertanian adalah sebuah kendaraan udara tanpa berawak yang diterapkan kepada pertanian dalam rangka membantu meningkatkan produksi tanaman dan memantau pertumbuhan tanaman. 
+                      </p>
+                      <button id="openModal1" class="absolute left-6 bottom-6 px-6 py-2 text-lime-950 font-semibold border-4 border-lime-950 rounded-md hover:bg-lime-950 hover:text-white transition duration-300">
+                          Lihat Produk
+                      </button>
+                  </div>
+                  
+                    
+                    <!-- Product 2 -->
+                    <div class="relative bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform flex-none w-72">
+                        <img src="asset/GREEN_HOUSE.jpg" alt="Mengapa Berternak?" class="w-full h-40 object-cover rounded mb-4">
+                        <h6 class="text-xl font-semibold mb-2 text-gray-800 hover:text-gray-600">GREEN HOUSE</h6>
+                        <p class="text-gray-700 text-xs md:text-base lg:text-sm leading-relaxed mb-4">Greenhouse adalah sebuah struktur bangunan yang dirancang untuk menanam tanaman dalam lingkungan yang terkontrol. Biasanya, greenhouses digunakan untuk meningkatkan pertumbuhan tanaman dengan menciptakan iklim mikro yang ideal. </p>
+                        <button id="openModal2" class="left-6 bottom-6 px-6 py-2 text-lime-950 font-semibold border-4 border-lime-950 rounded-md hover:bg-lime-950 hover:text-white transition duration-300" >
+                            Lihat Produk
+                        </button>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="relative bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform flex-none w-72">
+                        <img src="asset/tractor.webp" alt="Mengapa Agribisnis?" class="w-full h-40 object-cover rounded mb-4">
+                        <h6 class="text-xl font-semibold mb-2 text-gray-800 hover:text-gray-600">TRACTOR</h6>
+                        <p class="text-gray-700 text-xs md:text-base lg:text-sm leading-relaxed mb-4">Traktor adalah alat pertanian yang paling sering digunakan untuk melakukan pengolahan tanah.</p>
+                        <button id="openModal3" class="absolute left-6 bottom-6 px-6 py-2 text-lime-950 font-semibold border-4 border-lime-950 rounded-md hover:bg-lime-950 hover:text-white transition duration-300">
+                            Lihat Produk
+                        </button>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="relative bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform flex-none w-72">
+                        <img src="asset/Transplanter.JPG" alt="Mengapa Agribisnis?" class="w-full h-40 object-cover rounded mb-4">
+                        <h6 class="text-xl font-semibold mb-2 text-gray-800 hover:text-gray-600">TRANSPLANTER</h6>
+                        <p class="text-gray-700 text-xs md:text-base lg:text-sm leading-relaxed mb-4">alat tanam bibit padi dengan jumlah, kedalaman, jarak, dan kondisi penanaman yang sama.</p>
+                        <button id="openModal4" class="absolute left-6 bottom-6 px-6 py-2 text-lime-950 font-semibold border-4 border-lime-950 rounded-md hover:bg-lime-950 hover:text-white transition duration-300">
+                            Lihat Produk
+                        </button>
+                    </div>
+                    <!-- Product 5 -->
+                    <div class="relative bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform flex-none w-72">
+                        <img src="asset/smartAgricultur.jpg" alt="Mengapa Agribisnis?" class="w-full h-40 object-cover rounded mb-4">
+                        <h6 class="text-xl font-semibold mb-2 text-gray-800 hover:text-gray-600">SMART AGRICULTUR</h6>
+                        <p class="text-gray-700 text-xs md:text-base lg:text-sm leading-relaxed mb-4">sistem pertanian cerdas atau disebut juga sebagai smart farming. Sistem ini memanfaatkan teknologi dan inovasi sehingga kegiatan bertani menjadi lebih efektif dan efisien.</p>
+                        <button id="openModal5" class="absolute left-6 bottom-6 px-6 py-2 text-lime-950 font-semibold border-4 border-lime-950 rounded-md hover:bg-lime-950 hover:text-white transition duration-300">
+                            Lihat Produk
+                        </button>
+                    </div>
+                    <!-- Product 6 -->
+                    <div class="relative bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform flex-none w-72">
+                      <img src="asset/hydroponics.jpg" alt="Mengapa Bertani?" class="w-full h-40 object-cover rounded mb-4">
+                      <h6 class="text-xl font-semibold mb-2 text-gray-800 hover:text-gray-600">HIDROPONIC</h6>
+                      <p class="text-gray-700 text-xs md:text-base lg:text-sm leading-relaxed mb-4">adalah salah satu metode dalam budidaya menanam dengan memanfaatkan air dengan menekankan pada pemenuhan kebutuhan hara nutrisi bagi tanaman.</p>
+                      <button id="openModal6" class="absolute left-6 bottom-6 px-6 py-2 text-lime-950 font-semibold border-4 border-lime-950 rounded-md hover:bg-lime-950 hover:text-white transition duration-300">
+                          Lihat Produk
+                      </button>
+                  </div>
+                    
+                </div>
+               
+                
+                  <!-- Tombol Left -->
+                  <button 
+                    id="scrollLeft" 
+                    class="hidden lg:flex absolute left-0 top-1/2 transform -translate-y-1/2 bg-lime-950 bg-opacity-50 p-2 rounded-full shadow hover:bg-opacity-100 transition duration-300 "
+                    aria-label="Scroll Left">
+                    <span class="material-symbols-outlined">arrow_left</span>
+                  </button>
+                
+                  <!-- Tombol Right -->
+                  <button 
+                    id="scrollRight" 
+                    class="hidden lg:flex absolute right-0 top-1/2 transform -translate-y-1/2 bg-lime-950 bg-opacity-50 p-2 rounded-full shadow hover:bg-opacity-100 transition duration-300"
+                    aria-label="Scroll Right">
+                    <span class="material-symbols-outlined">arrow_right</span>
+                  </button>
+                
+                
+            </div>
+        </div>
+    
+                  <!-- Modal 1 -->
+                  <div id="productModal1" class="modal fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center z-50 ">
+                    <div class="modal-content bg-lime-950 p-6 rounded-lg max-w-96 w-full relative ">
+                        <span id="closeModal1" class="close-btn absolute top-4 right-4 text-gray-400 text-3xl cursor-pointer hover:text-gray-600">&times;</span>
+                        <h2 class="text-xl font-semibold text-center">Drone Pertanian</h2>
+                        <img src="asset/DRONE.jpg" alt="Gambar Produk" class="w-full h-auto my-4">
+                        <p class="text-white text-center mb-4">Drone atau kendaraan udara tanpa awak yang mampu mempermudah pekerjaan petani dengan kecanggihan teknologi. </p>
+                        <a href="index1.html">
+                          <button class="px-6 py-2 bg-green-50 text-lime-950 rounded-md hover:bg-green-100 transition duration-300">
+                              Beli Sekarang
+                          </button>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Modal 2 -->
+                  <div id="productModal2" class="modal fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center z-50">
+                    <div class="modal-content bg-lime-950 p-6 rounded-lg max-w-96 w-full relative">
+                        <span id="closeModal2" class="close-btn absolute top-4 right-4 text-gray-400 text-3xl cursor-pointer hover:text-gray-600">&times;</span>
+                        <h2 class="text-xl font-semibold text-center">Green House</h2>
+                        <img src="asset/GREEN_HOUSE.jpg" alt="Gambar Produk" class="w-full h-auto my-4">
+                        <p class="text-white text-center mb-4">Greenhouse atau rumah kaca merupakan sebuah bangunan tempat tanaman ditanam.</p>
+                        <a href="index1.html">
+                        <button class="px-6 py-2 bg-green-50 text-lime-950 rounded-md hover:bg-green-100 transition duration-300">
+                            Beli Sekarang
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Modal 3 -->
+                  <div id="productModal3" class="modal fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center z-50">
+                    <div class="modal-content bg-lime-950 p-6 rounded-lg max-w-96 w-full relative">
+                        <span id="closeModal3" class="close-btn absolute top-4 right-4 text-gray-400 text-3xl cursor-pointer hover:text-gray-600">&times;</span>
+                        <h2 class="text-xl font-semibold text-center">TRACTOR</h2>
+                        <img src="asset/tractor.webp" alt="Gambar Produk" class="w-full h-auto my-4">
+                        <p class="text-white text-center mb-4">Traktor adalah alat pertanian yang paling sering digunakan untuk melakukan pengolahan tanah.</p>
+                        <a href="index1.html">
+                        <button class="px-6 py-2 bg-green-50 text-lime-950 rounded-md hover:bg-green-100 transition duration-300"">
+                            Beli Sekarang
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Modal 4 -->
+                  <div id="productModal4" class="modal fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center z-50">
+                  <div class="modal-content bg-lime-950 p-6 rounded-lg max-w-96 w-full relative">
+                      <span id="closeModal4" class="close-btn absolute top-4 right-4 text-gray-400 text-3xl cursor-pointer hover:text-gray-600">&times;</span>
+                      <h2 class="text-xl font-semibold text-center">Transplanter</h2>
+                      <img src="asset/Transplanter.JPG" alt="Gambar Produk" class="w-full h-auto my-4">
+                      <p class="text-white text-center mb-4">alat untuk menanam padi. Bertani tidak harus berlumpur, bahkan menggembalakan sapi dan kerbau untuk mengolah sawah.</p>
+                      <a href="index1.html">
+                      <button class="px-6 py-2 bg-green-50 text-lime-950 rounded-md hover:bg-green-100 transition duration-300">
+                          Beli Sekarang
+                      </button>
+                      </a>
+                  </div>
+                  </div>
+                  </div>
+                    <!-- Modal 5 -->
+                    <div id="productModal5" class="modal fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center z-50">
+                      <div class="modal-content bg-lime-950 p-6 rounded-lg max-w-96 w-full relative">
+                          <span id="closeModal5" class="close-btn absolute top-4 right-4 text-gray-400 text-3xl cursor-pointer hover:text-gray-600">&times;</span>
+                          <h2 class="text-xl font-semibold text-center">Smart Agricultur</h2>
+                          <img src="asset/smartAgricultur.jpg" alt="Gambar Produk" class="w-full h-auto my-4">
+                          <p class="text-white text-center mb-4">membantu petani untuk meningkatkan produksi sekaligus mencapai ketahanan pangan melalui teknologi</p>
+                          <a href="index1.html">
+                          <button class="px-6 py-2 bg-green-50 text-lime-950 rounded-md hover:bg-green-100 transition duration-300">
+                              Beli Sekarang
+                          </button>
+                          </a>
+                      </div>
+                  </div>
+                  </div>
+                  <!-- Modal 6 -->
+                  <div id="productModal6" class="modal fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center z-50">
+                  <div class="modal-content bg-lime-950 p-6 rounded-lg max-w-96 w-full relative">
+                      <span id="closeModal6" class="close-btn absolute top-4 right-4 text-gray-400 text-3xl cursor-pointer hover:text-gray-600">&times;</span>
+                      <h2 class="text-xl font-semibold text-center">Hidroponik</h2>
+                      <img src="asset/hydroponics.jpg" alt="Gambar Produk" class="w-full h-auto my-4">
+                      <p class="text-white text-center mb-4">Berkebun mudah dan efisien di rumah.</p>
+                      <a href="index1.html">
+                      <button class="px-6 py-2 bg-green-50 text-lime-950 rounded-md hover:bg-green-100 transition duration-300">
+                          Beli Sekarang
+                      </button>
+                      </a>
+                  </div>
+                  </div>
+                  </div>
+                  </section>
+
+    <section id="gallery" class="bg-green-50 scroll-py-10 pb-10 pt-16 z-0">
+      <div class="layar-dalam max-w-screen-xl mx-auto px-8">
+        <h3 class="text-4xl text-center text-lime-950 font-semibold mb-16">
+          Gallery
+         
+        
+        </h3>
+        
+        <div class="relative overflow-hidden">
+          <div id="logo1" class="flex gap-x-20 animate-marquee">
+              <img src="asset/DRONE.jpg" class="h-40 object-cover rounded-md" />
+              <img src="asset/hydroponics.jpg" class="h-40 object-cover rounded-md" />
+              <img src="asset/GREEN_HOUSE.jpg" class="h-40 object-cover rounded-md" />
+              <img src="asset/tractor.webp" class="h-40 object-cover rounded-md" />
+              <img src="asset/Transplanter.JPG" class="h-40 object-cover rounded-md" />
+              <img src="asset/smartAgricultur.jpg" class="h-40 object-cover rounded-md" />
+              <img src="asset/bioflok1.jpeg" class="h-40 object-cover rounded-md" />
+              <img src="asset/kebun.jpg" class="h-40 object-cover rounded-md" />
+          </div>
+      </div>
+      
+      
+</div>
+</div>
+</section>
+
+<section id="blog" class="bg-gradient-to-b from-green-50 via-green-100 to-green-100 min-h-screen py-20">
+  <div class="container mx-auto px-4">
+    <h3 class="text-4xl text-center text-lime-950 font-semibold mb-8">Latest Blog</h3>
+
+    <p class="text-lg text-lime-950 italic text-center max-w-3xl mx-auto mb-12">
+      Begitu banyak hal yang dapat kita lakukan dalam sektor agrikultur, dengan luasnya
+      sumber daya yang dimiliki Indonesia dapat membuat peluang usaha dalam bidang agrikultur sangat menjanjikan.
+    </p>
+
+    <div class="relative">
+      <!-- Kontainer Blog -->
+      <div id="blogGrid" class="flex overflow-x-auto gap-6 pb-8">
+        <!-- Card 1 -->
+        <div class="snap-start flex-none w-[300px] sm:w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 mx-3">
+          <div class="h-64 bg-cover bg-center rounded-t-lg" style="background-image: url('asset/hydroponics.jpg')"></div>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Apa itu Hidroponik?</h4>
+            <p class="text-gray-600">
+              Hidroponik adalah salah satu metode dalam budidaya menanam dengan memanfaatkan air tanpa menggunakan media tanah dengan menekankan pada pemenuhan kebutuhan hara nutrisi bagi tanaman.
+            </p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="snap-start flex-none w-[300px] sm:w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 mx-3">
+          <div class="h-64 bg-cover bg-center rounded-t-lg" style="background-image: url('asset/bioflok1.jpeg')"></div>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Apa itu Bioflog?</h4>
+            <p class="text-gray-600">
+              Bioflok merupakan suatu teknik budidaya melalui rekayasa lingkungan yang mengandalkan suplai oksigen dan pemanfaat mikroorganisme pada air kolam yang dapat meningkatkan nilai kecernaan pakan.
+            </p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="snap-start flex-none w-[300px] sm:w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 mx-3">
+          <div class="h-64 bg-cover bg-center rounded-t-lg" style="background-image: url('asset/greenhouse-still-life_23-2148127866.jpg')"></div>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Apa itu Greenhouse?</h4>
+            <p class="text-gray-600">
+              Greenhouse adalah bangunan transparan dari kaca atau plastik untuk menanam tanaman dalam lingkungan terkontrol, melindungi dari cuaca, hama, dan penyakit.
+            </p>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="snap-start flex-none w-[300px] sm:w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 mx-3">
+          <div class="h-64 bg-cover bg-center rounded-t-lg" style="background-image: url('asset/polikultur.jpg')"></div>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Apa itu Polikultur?</h4>
+            <p class="text-gray-600">
+              Polikultur merupakan teknik menanam yang dilakukan dengan menggunakan lebih dari satu jenis tanaman dalam satu lahan dan waktu yang sama. Penggunaan tanaman yang akan dipolikultur pun harus tepat dan saling menguntungkan atau setidaknya tidak saling merugikan karena terdapat dua jenis tanaman yang berbeda dalam satu lahan.
+            </p>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="snap-start flex-none w-[300px] sm:w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 mx-3">
+          <div class="h-64 bg-cover bg-center rounded-t-lg" style="background-image: url('asset/sapi.jpeg')"></div>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Apa itu Peternakan Organik?</h4>
+            <p class="text-gray-600">
+              Peternakan organik adalah sebuah sistem produksi yang menerapkan manajemen secara holistik yang mendorong dan meningkatkan kesehatan agroekosistem, termasuk keanekaragaman hayati, siklus biologi, dan aktivitas biologis tanah, dan mengoptimalkan kesehatan dan inter-dependensi komunitas dari kehidupan tanah.
+            </p>
+          </div>
+        </div>
+         <!-- Card 6 -->
+         <div class="snap-start flex-none w-[300px] sm:w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 mx-3">
+          <div class="h-64 bg-cover bg-center rounded-t-lg" style="background-image: url('asset/smartirigation.png')"></div>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Apa itu Smart Irrigation?</h4>
+            <p class="text-gray-600">
+              Smart Irrigation atau Irigasi Pintar adalah metode irigasi yang menggunakan teknologi untuk mengatur penggunaan air secara efisien berdasarkan kebutuhan spesifik tanaman dan kondisi lingkungan.            </p>
+          </div>
+        </div>
+         <!-- Card 7 -->
+         <div class="snap-start flex-none w-[300px] sm:w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 mx-3">
+          <div class="h-64 bg-cover bg-center rounded-t-lg" style="background-image: url('asset/agroekosistem.webp')"></div>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Apa itu AgroEkosistem?</h4>
+            <p class="text-gray-600">
+              Agroekosistem adalah sistem yang diterapkan untuk memajukan dunia pertanian. Sistem yang melibatkan faktor alam dan sosial serta menciptakan sebuah harmoni dalam kehidupan.            </p>
+          </div>
+        </div>
+         <!-- Card 8 -->
+         <div class="snap-start flex-none w-[300px] sm:w-[350px] bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 mx-3">
+          <div class="h-64 bg-cover bg-center rounded-t-lg" style="background-image: url('asset/biochar.webp')"></div>
+          <div class="p-4">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Apa itu Biochar?</h4>
+            <p class="text-gray-600">
+              Biochar adalah bahan padat kaya karbon hasil konversi dari limbah organik (biomas pertanian) melalui pembakaran tidak sempurna atau suplai oksigen terbatas (pyrolysis).            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tombol Scroll Kiri -->
+      <button
+        id="scrollLeft1"
+        class="hidden lg:flex absolute left-0 top-1/2 transform -translate-y-1/2 bg-lime-950 bg-opacity-50 p-2 rounded-full shadow hover:bg-opacity-100 transition duration-300"
+        aria-label="Scroll Left"
+      >
+        <span class="material-symbols-outlined">arrow_left</span>
+      </button>
+
+      <!-- Tombol Scroll Kanan -->
+      <button
+        id="scrollRight1"
+        class="hidden lg:flex absolute right-0 top-1/2 transform -translate-y-1/2 bg-lime-950 bg-opacity-50 p-2 rounded-full shadow hover:bg-opacity-100 transition duration-300"
+        aria-label="Scroll Right"
+      >
+        <span class="material-symbols-outlined">arrow_right</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- FOOTER -->
+<footer id="contact" class=" bg-gradient-to-b from-green-100 via-green-150 to-lime-800 text-black">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap gap-8 justify-between items-start ">
+    
+    <!-- Contact Form Section -->
+    <div class="kontak bg-white p-8 mt-5 rounded-lg shadow-lg flex-1 min-w-[280px] md:max-w-[450px]">
+      <h5 class="text-xl font-bold text-gray-800 mb-4">Kontak</h5>
+      <p class="text-gray-600 mb-6">Silakan isi form dibawah ini untuk menghubungi kami:</p>
+      <form action="">
+        <div class="grid grid-cols-1 gap-6 mb-6">
+          <div>
+            <label for="name" class="block text-gray-700">Nama</label>
+            <input id="name" type="text" placeholder="Full Name" class="w-full p-3 mt-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label for="email" class="block text-gray-700">Email</label>
+            <input id="email" type="email" placeholder="Email" class="w-full p-3 mt-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+        </div>
+        <div class="mb-6">
+          <label for="message" class="block text-gray-700">Pesan Anda</label>
+          <textarea id="message" rows="6" placeholder="Your Message" class="w-full p-3 mt-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+        <button type="submit" onclick="sendToWhatsapp()" class="bg-transparent text-lime-950 font-semibold border-4 border-lime-950 py-3 px-8 rounded-md hover:bg-lime-950 hover:text-white focus:outline-none focus:ring-2 focus:ring-lime-900">
+          Kirim
+        </button>
+      </form>
+    </div>
+
+    <!-- Cek Resi Section -->
+    <div class="cek-resi bg-white p-6 mt-5 rounded-lg shadow-lg w-full md:w-1/2 lg:w-1/3">
+      <h2 class="text-2xl font-semibold text-center mb-4">Cek Resi Pengiriman</h2>
+      <form id="cekResiForm">
+        <div class="mb-4">
+          <label for="resi" class="block text-sm font-medium">Masukkan Nomor Resi</label>
+          <input type="text" id="resi" name="resi" class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Contoh: JNE1234567890" required>
+        </div>
+        <div class="mb-4">
+          <label for="courier" class="block text-sm font-medium">Pilih Kurir</label>
+          <select id="courier" name="courier" class="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <option value="jne">JNE</option>
+            <option value="pos">Pos Indonesia</option>
+            <option value="tiki">TIKI</option>
+            <option value="anteraja">AnterAja</option>
+            <option value="jnt">JNT</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full bg-transparent text-lime-800 font-semibold border-4 border-lime-800 p-3 rounded-lg hover:bg-lime-950 hover:text-white transition duration-300">Cek Status Resi</button>
+      </form>
+    </div>
+    <div id="statusModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+      <div class="bg-white rounded-lg w-96 p-6 shadow-xl">
+          <h3 class="text-lg font-semibold mb-4 text-center text-primary">Status Pengiriman</h3>
+          <div id="resiStatus" class="text-gray-700 space-y-4">
+              <div class="flex justify-between">
+                  <span class="font-medium text-sm">Nomor Resi:</span>
+                  <span id="resiNumber" class="text-sm text-gray-600"></span>
+              </div>
+              <div class="flex justify-between">
+                  <span class="font-medium text-sm">Status:</span> 
+                  <span id="resiStatusText" class="text-sm text-gray-600"></span>
+              </div>
+              <div class="flex justify-between">
+                  <span class="font-medium text-sm">Tanggal:</span>
+                  <span id="resiDate" class="text-sm text-gray-600"></span>
+              </div>
+              <div class="flex justify-between">
+                  <span class="font-medium text-sm">Lokasi:</span>
+                  <span id="resiLocation" class="text-sm text-gray-600"></span>
+              </div>
+          </div>
+          <div class="flex justify-end mt-4">
+              <button id="closeModal" class="w-full bg-transparent text-lime-800 font-semibold border-4 border-lime-800 p-3 rounded-lg hover:bg-lime-950 hover:text-white transition duration-300">Tutup</button>
+          </div>
+      </div>
+      </div>
+    
+
+    <!-- Alamat Section -->
+    <div class="sitemap bg-white p-8 mt-5 rounded-lg shadow-lg w-full md:w-1/2 lg:w-1/3">
+      <h5 class="text-xl font-bold text-gray-800 mb-4">Alamat</h5>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0257189241265!2d106.99001647593701!3d-6.26034246129294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d1fa62a7c6d%3A0x616f110f3e4423d8!2sTOKO%20KEVIN!5e0!3m2!1sen!2sid!4v1730520972997!5m2!1sen!2sid" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        class="w-full h-64 md:h-80 rounded-md">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Copyright Section -->
+  <div class="max-w-screen-xl mt-5 mx-auto text-center py-6 mt-6 border-t border-gray-600">
+    <div class="copyright text-white">&copy; 2024 Betawi Muda Farm</div>
+  </div>
+</footer>
+
+
+<script src="script3.js"></script>   
+<script src="script2.js"></script>     
+<script src="script.js"></script>
+</body>
+</html>
