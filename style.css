@@ -81,6 +81,12 @@ nav li:first-child {
   justify-content: flex-start;
 }
 
+.sidebar.rounded-full {
+  border-radius: 9999px; /* Membuat elemen berbentuk oval */
+  transition: all 0.3s ease; 
+}
+
+
 .sidebar li {
   width: 100%;
 }
