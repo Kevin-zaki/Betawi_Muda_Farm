@@ -34,12 +34,36 @@
         <h1>PRODUCT</h1>
         <ul class="listCard">
         </ul>
-        <div class="checkOut">
-            <div class="total">0</div>
-            <div class="closeShopping">Close</div>
+        <div class="bttn">
+            <div class="checkOut">
+                <div class="total">0</div>
+                <div class="closeShopping">CLOSE</div>
+            </div>
+            <div class="billing">
+                <div class="closeShopping">PEMBAYARAN</div>
+            </div>
         </div>
     </div>
 
+          <!--Bagian Popup Billing -->
+    <div class="popup-billing" id="popup-billing">
+        <div class="popup-content">
+            <h2>Detail Pembelian <br>BETAWI MUDA FARM</h2> <br>
+            <ul id="product-list"></ul>
+            <span>==========================</span>
+            <div class="info">
+            <div><strong>Total Harga: </strong><span id="total-price"></span></div>
+            <div><strong>Status Pembayaran: </strong><span id="payment-status">Lunas</span></div>
+            <div><strong>No Resi: </strong><span id="resi-number">582230008329223</span></div>
+        </div>
+        <div class="popup-buttons">
+            <button id="close-popup" style="background-color: red;">Tutup</button>
+            <button id="print-popup" style="background-color: blue;">Print</button>
+            <button id="history-button" style="background-color: rgb(156, 156, 32);">Riwayat</button>
+            <button id="save-button">Simpan</button>
+        </div>
+        </div>
+    </div>
     <script src="script3.js"></script>
 </body>
 </html>
