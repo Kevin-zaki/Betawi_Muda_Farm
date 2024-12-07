@@ -425,37 +425,13 @@
 
 
 
-<!-- FOOTER -->
-<footer id="contact" class=" bg-gradient-to-b from-green-100 via-green-150 to-lime-800 text-black">
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap gap-8 justify-between items-start ">
-    
-    <!-- Contact Form Section -->
-    <div class="kontak bg-white p-8 mt-5 rounded-lg shadow-lg flex-1 min-w-[280px] md:max-w-[450px]">
-      <h5 class="text-xl font-bold text-gray-800 mb-4">Kontak</h5>
-      <p class="text-gray-600 mb-6">Silakan isi form dibawah ini untuk menghubungi kami:</p>
-      <form action="">
-        <div class="grid grid-cols-1 gap-6 mb-6">
-          <div>
-            <label for="name" class="block text-gray-700">Nama</label>
-            <input id="name" type="text" placeholder="Full Name" class="w-full p-3 mt-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-          <div>
-            <label for="email" class="block text-gray-700">Email</label>
-            <input id="email" type="email" placeholder="Email" class="w-full p-3 mt-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-        </div>
-        <div class="mb-6">
-          <label for="message" class="block text-gray-700">Pesan Anda</label>
-          <textarea id="message" rows="6" placeholder="Your Message" class="w-full p-3 mt-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-        </div>
-        <button type="submit" onclick="sendToWhatsapp()" class="bg-transparent text-lime-950 font-semibold border-4 border-lime-950 py-3 px-8 rounded-md hover:bg-lime-950 hover:text-white focus:outline-none focus:ring-2 focus:ring-lime-900">
-          Kirim
-        </button>
-      </form>
-    </div>
 
+
+<!-- FOOTER -->
+<footer id="contact" class="bg-gradient-to-b from-green-100 via-green-150 to-lime-800 text-black">
+  <div class="bg-white p-8 mt-5 rounded-lg shadow-lg">
     <!-- Cek Resi Section -->
-    <div class="cek-resi bg-white p-6 mt-5 rounded-lg shadow-lg w-full md:w-1/2 lg:w-1/3">
+    <div class="cek-resi bg-white p-6 mt-5 rounded-lg shadow-lg w-full md:w-2/3 lg:w-1/2 mx-auto">
       <h2 class="text-2xl font-semibold text-center mb-4">Cek Resi Pengiriman</h2>
       <form id="cekResiForm">
         <div class="mb-4">
@@ -475,52 +451,107 @@
         <button type="submit" class="w-full bg-transparent text-lime-800 font-semibold border-4 border-lime-800 p-3 rounded-lg hover:bg-lime-950 hover:text-white transition duration-300">Cek Status Resi</button>
       </form>
     </div>
+
+    <!-- Modal for Status -->
     <div id="statusModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
       <div class="bg-white rounded-lg w-96 p-6 shadow-xl">
-          <h3 class="text-lg font-semibold mb-4 text-center text-primary">Status Pengiriman</h3>
-          <div id="resiStatus" class="text-gray-700 space-y-4">
-              <div class="flex justify-between">
-                  <span class="font-medium text-sm">Nomor Resi:</span>
-                  <span id="resiNumber" class="text-sm text-gray-600"></span>
-              </div>
-              <div class="flex justify-between">
-                  <span class="font-medium text-sm">Status:</span> 
-                  <span id="resiStatusText" class="text-sm text-gray-600"></span>
-              </div>
-              <div class="flex justify-between">
-                  <span class="font-medium text-sm">Tanggal:</span>
-                  <span id="resiDate" class="text-sm text-gray-600"></span>
-              </div>
-              <div class="flex justify-between">
-                  <span class="font-medium text-sm">Lokasi:</span>
-                  <span id="resiLocation" class="text-sm text-gray-600"></span>
-              </div>
+        <h3 class="text-lg font-semibold mb-4 text-center text-primary">Status Pengiriman</h3>
+        <div id="resiStatus" class="text-gray-700 space-y-4">
+          <div class="flex justify-between">
+            <span class="font-medium text-sm">Nomor Resi:</span>
+            <span id="resiNumber" class="text-sm text-gray-600"></span>
           </div>
-          <div class="flex justify-end mt-4">
-              <button id="closeModal" class="w-full bg-transparent text-lime-800 font-semibold border-4 border-lime-800 p-3 rounded-lg hover:bg-lime-950 hover:text-white transition duration-300">Tutup</button>
+          <div class="flex justify-between">
+            <span class="font-medium text-sm">Status:</span> 
+            <span id="resiStatusText" class="text-sm text-gray-600"></span>
           </div>
+          <div class="flex justify-between">
+            <span class="font-medium text-sm">Tanggal:</span>
+            <span id="resiDate" class="text-sm text-gray-600"></span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-medium text-sm">Lokasi:</span>
+            <span id="resiLocation" class="text-sm text-gray-600"></span>
+          </div>
+        </div>
+        <div class="flex justify-end mt-4">
+          <button id="closeModal" class="w-full bg-transparent text-lime-800 font-semibold border-4 border-lime-800 p-3 rounded-lg hover:bg-lime-950 hover:text-white transition duration-300">Tutup</button>
+        </div>
       </div>
-      </div>
+    </div>
     
+    <!-- Kontak & Alamat Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+      <!-- Contact Form Section -->
+      <div class="kontak p-8 bg-gray-50 rounded-lg shadow-md">
+        <h6 class="text-lg font-semibold text-gray-800 mb-4">Kontak</h6>
+        <p class="text-gray-600 mb-6">Silakan isi form dibawah ini untuk menghubungi kami:</p>
+        <form action="">
+          <div class="grid grid-cols-1 gap-6 mb-6">
+            <div>
+              <label for="name" class="block text-gray-700">Nama</label>
+              <input id="name" type="text" placeholder="Full Name" class="w-full p-3 mt-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+              <label for="email" class="block text-gray-700">Email</label>
+              <input id="email" type="email" placeholder="Email" class="w-full p-3 mt-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+          </div>
+          <div class="mb-6">
+            <label for="message" class="block text-gray-700">Pesan Anda</label>
+            <textarea id="message" rows="6" placeholder="Your Message" class="w-full p-3 mt-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          </div>
+          <button type="submit" onclick="sendToWhatsapp()" class="bg-transparent text-lime-950 font-semibold border-4 border-lime-950 py-3 px-8 rounded-md hover:bg-lime-950 hover:text-white focus:outline-none focus:ring-2 focus:ring-lime-900">
+            Kirim
+          </button>
+        </form>
+      </div>
 
-    <!-- Alamat Section -->
-    <div class="sitemap bg-white p-8 mt-5 rounded-lg shadow-lg w-full md:w-1/2 lg:w-1/3">
-      <h5 class="text-xl font-bold text-gray-800 mb-4">Alamat</h5>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0257189241265!2d106.99001647593701!3d-6.26034246129294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d1fa62a7c6d%3A0x616f110f3e4423d8!2sTOKO%20KEVIN!5e0!3m2!1sen!2sid!4v1730520972997!5m2!1sen!2sid" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        class="w-full h-64 md:h-80 rounded-md">
-      </iframe>
+      <!-- Alamat Section (Map) -->
+      <div class="sitemap p-8 bg-gray-50 rounded-lg shadow-md">
+        <h6 class="text-lg font-semibold text-gray-800 mb-4">Alamat</h6>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0257189241265!2d106.99001647593701!3d-6.26034246129294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d1fa62a7c6d%3A0x616f110f3e4423d8!2sTOKO%20KEVIN!5e0!3m2!1sen!2sid!4v1730520972997!5m2!1sen!2sid" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          class="w-full h-64 md:h-80 rounded-md">
+        </iframe>
+      </div>
     </div>
   </div>
 
-  <!-- Copyright Section -->
-  <div class="max-w-screen-xl mt-5 mx-auto text-center py-6 mt-6 border-t border-gray-600">
-    <div class="copyright text-white">&copy; 2024 Betawi Muda Farm</div>
+
+<!-- Sosial Media & Copyright Section -->
+<div class="social flex justify-center items-center flex-col mt-4">
+  <!-- Phone Number with Icon -->
+  <div class="flex items-center space-x-2 text-white mb-1">
+    <i data-feather="phone" class="text-xl"></i>
+    <h7 class="text-center text-white">+62-888-666-555</h7>
   </div>
-</footer>
+
+  <!-- Sosial Media Icon -->
+  <div class="max-w-screen-xl mt-1 mx-auto text-center py-2 mt-1 border-t border-gray-600">
+    <div class="flex justify-center space-x-6">
+      <a href="https://instagram.com" class="text-2xl text-white hover:text-pink-600 transition duration-300">
+        <i data-feather="instagram"></i>
+      </a>
+      <a href="https://twitter.com" class="text-2xl text-white hover:text-blue-500 transition duration-300">
+        <i data-feather="twitter"></i>
+      </a>
+      <a href="https://facebook.com" class="text-2xl text-white hover:text-blue-700 transition duration-300">
+        <i data-feather="facebook"></i>
+      </a>
+    </div>
+    <div class="copyright text-white mt-4 py-2">&copy; 2024 Betawi Muda Farm</div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/feather-icons"></script>
+
+<script>
+  feather.replace();
+</script>
 
 
 <script src="script3.js"></script>   
