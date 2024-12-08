@@ -134,6 +134,7 @@ billingButton.addEventListener('click', () => {
 
         // Bagian ini unuk status pembayaran dan no resi
         document.getElementById('payment-status').innerText = '-';
+        document.getElementById('courier-status').innerText = '-';
         document.getElementById('resi-number').innerText = '';
     } else {
         // Menampilkan produk yang dibeli dalam popup
@@ -148,7 +149,8 @@ billingButton.addEventListener('click', () => {
 
         // Set status pembayaran dan no resi
         document.getElementById('payment-status').innerText = 'Lunas';
-        document.getElementById('resi-number').innerText = '582230008329223';
+        document.getElementById('courier-status').innerText = 'JNT CARGO';
+        document.getElementById('resi-number').innerText = 'JP2255749628';
     }
     totalPriceElement.innerText = `Rp ${totalPrice.toLocaleString()}`;
 

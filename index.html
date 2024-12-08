@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css" >
-  
+    <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     
     
@@ -428,10 +428,10 @@
 
 
 <!-- FOOTER -->
-<footer id="contact" class="bg-gradient-to-b from-green-100 via-green-150 to-lime-800 text-black">
-  <div class="bg-white p-8 mt-5 rounded-lg shadow-lg">
+<!-- <footer id="contact" class="bg-gradient-to-b from-green-100 via-green-150 to-lime-800 text-black">
+  <div class="bg-white p-8 mt-5 rounded-lg shadow-lg"> -->
     <!-- Cek Resi Section -->
-    <div class="cek-resi bg-white p-6 mt-5 rounded-lg shadow-lg w-full md:w-2/3 lg:w-1/2 mx-auto">
+    <!-- <div class="cek-resi bg-white p-6 mt-5 rounded-lg shadow-lg w-full md:w-2/3 lg:w-1/2 mx-auto">
       <h2 class="text-2xl font-semibold text-center mb-4">Cek Resi Pengiriman</h2>
       <form id="cekResiForm">
         <div class="mb-4">
@@ -450,10 +450,10 @@
         </div>
         <button type="submit" class="w-full bg-transparent text-lime-950 font-semibold border-4 border-lime-800 p-3 rounded-lg hover:bg-lime-950 hover:text-white transition duration-300">Cek Status Resi</button>
       </form>
-    </div>
+    </div> -->
 
     <!-- Modal for Status -->
-    <div id="statusModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+    <!-- <div id="statusModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
       <div class="bg-white rounded-lg w-96 p-6 shadow-xl">
         <h3 class="text-lg font-semibold mb-4 text-center text-primary">Status Pengiriman</h3>
         <div id="resiStatus" class="text-gray-700 space-y-4">
@@ -479,11 +479,11 @@
         </div>
       </div>
     </div>
-    
+     -->
     <!-- Kontak & Alamat Section -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+    <!-- <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8"> -->
       <!-- Contact Form Section -->
-      <div class="kontak p-8 bg-gr-50 rounded-lg shadow-md">
+      <!-- <div class="kontak p-8 bg-gr-50 rounded-lg shadow-md">
         <h6 class="text-lg font-semibold text-gray-800 mb-4">Kontak</h6>
         <p class="text-gray-600 mb-6">Silakan isi form dibawah ini untuk menghubungi kami:</p>
         <form action="">
@@ -505,10 +505,10 @@
             Kirim
           </button>
         </form>
-      </div>
+      </div> -->
 
       <!-- Alamat Section (Map) -->
-      <div class="sitemap p-8 bg-gray-50 rounded-lg shadow-md">
+      <!-- <div class="sitemap p-8 bg-gray-50 rounded-lg shadow-md">
         <h6 class="text-lg font-semibold text-gray-800 mb-4">Alamat</h6>
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0257189241265!2d106.99001647593701!3d-6.26034246129294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d1fa62a7c6d%3A0x616f110f3e4423d8!2sTOKO%20KEVIN!5e0!3m2!1sen!2sid!4v1730520972997!5m2!1sen!2sid" 
@@ -519,10 +519,10 @@
         </iframe>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
-  <footer class="bg-lime-950 text-white py-10">
+  <footer id="contact" class="bg-lime-950 text-white py-10">
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
       <!-- Logo and Tagline -->
       <div class="col-span-1">
@@ -535,33 +535,62 @@
         <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
         <ul class="space-y-2">
           <li><a href="#" class="hover:underline">Home</a></li>
-          <li><a href="#" class="hover:underline">Blog</a></li>
-          <li><a href="#" class="hover:underline">List Layout</a></li>
-          <li><a href="#" class="hover:underline">Contact</a></li>
+          <li><a href="#aboutus" class="hover:underline">About Us</a></li>
+          <li><a href="#product" class="hover:underline">Product</a></li>
+          <li><a href="#gallery" class="hover:underline">Gallery</a></li>
+          <li><a href="#blog" class="hover:underline">Blog</a></li>
+         
         </ul>
       </div>
   
       <!-- Contact Info -->
-      <div class="col-span-1">
-        <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-        <ul class="space-y-2">
-          <li><i data-feather="map-pin" class="inline-block mr-2"></i>123 Farm Road, Green City</li>
-          <li><i data-feather="phone" class="inline-block mr-2"></i>+62-888-666-555</li>
-          <li><i data-feather="mail" class="inline-block mr-2"></i>info@betawimudafarm.com</li>
-        </ul>
-      </div>
+     <div class="col-span-1">
+  <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+  <ul class="space-y-2">
+    <li>
+      <a
+        href="https://maps.app.goo.gl/acsEorbkEBMWp3QX7"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-green-600 hover:underline flex items-center"
+      >
+        <i data-feather="map-pin" class="inline-block mr-2"></i>BETAWI MUDA FARM
+      </a>
+    </li>
+    <li><a href="contact.html" 
+      class="text-green-600 hover:underline flex items-center"
+    ><i data-feather="phone" class="inline-block mr-2"></i>+62 852-8324-1926</a></li>
+    <li>
+      <a href="https://mail.google.com/mail/?view=cm&to=kevinkzmh@gmail.com" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="text-green-600 hover:underline flex items-center">
+        <i data-feather="mail" class="inline-block mr-2"></i>BetawiMudaFarm@gmail.com
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
   
       <!-- Cek Resi -->
-      <div class="col-span-1">
-        <h3 class="text-lg font-semibold mb-4">Cek Resi</h3>
-        <form action="/cek-resi" method="GET" class="space-y-4">
-          <input
-            type="text"
-            name="resi"
-            placeholder="Contoh: JNE1234567890"
-            class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
-            required
-          />
+      <div class="cek-resi col-span-1">
+        <h2 class="text-lg font-semibold mb-4">Cek Resi Pengiriman</h3>
+        <form id="cekResiForm" method="GET" class="space-y-4">
+          <div class="mb-4">
+            <label for="resi" class="block text-sm font-medium">Masukkan Nomor Resi</label>
+            <input type="text" id="resi" name="resi" class="text-black w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Contoh: JNE1234567890" required>
+          </div>
+          <div class="mb-4">
+            <label for="courier" class="block text-sm font-medium">Pilih Kurir</label>
+            <select id="courier" name="courier" class="text-black w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+              <option value="jnt">JNT CARGO</option>
+              <option value="pos">Pos Indonesia</option>
+              <option value="tiki">TIKI</option>
+              <option value="anteraja">AnterAja</option>
+            
+            </select>
+          </div>
           <button
             type="submit"
             class="w-full bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition duration-300"
@@ -569,6 +598,32 @@
             Cek Resi
           </button>
         </form>
+      </div>
+      <div id="statusModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white rounded-lg w-96 p-6 shadow-xl">
+          <h3 class="text-lime-800 text-lg font-semibold mb-4 text-center text-primary">Status Pengiriman</h3>
+          <div id="resiStatus" class="text-gray-700 space-y-4">
+            <div class="flex justify-between">
+              <span class="font-medium text-sm">Nomor Resi:</span>
+              <span id="resiNumber" class="text-sm text-gray-600"></span>
+            </div>
+            <div class="flex justify-between">
+              <span class="font-medium text-sm">Status:</span> 
+              <span id="resiStatusText" class="text-sm text-gray-600"></span>
+            </div>
+            <div class="flex justify-between">
+              <span class="font-medium text-sm">Tanggal:</span>
+              <span id="resiDate" class="text-sm text-gray-600"></span>
+            </div>
+            <div class="flex justify-between">
+              <span class="font-medium text-sm">Lokasi:</span>
+              <span id="resiLocation" class="text-sm text-gray-600"></span>
+            </div>
+          </div>
+          <div class="flex justify-end mt-4">
+            <button id="closeModal" class="w-full bg-transparent text-lime-800 font-semibold border-4 border-lime-800 p-3 rounded-lg hover:bg-lime-950 hover:text-white transition duration-300">Tutup</button>
+          </div>
+        </div>
       </div>
     </div>
   
@@ -584,10 +639,10 @@
     </div>
   </footer>
   
-  <script src="https://unpkg.com/feather-icons"></script>
-  <script>
+
+  <!-- <script>
     feather.replace();
-  </script>
+  </script> -->
 
 
 <script src="script3.js"></script>   

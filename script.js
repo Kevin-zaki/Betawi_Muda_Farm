@@ -127,6 +127,8 @@ function sendToWhatsapp(){
 }
 
 
+feather.replace();
+
 
 
 
