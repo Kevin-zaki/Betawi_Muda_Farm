@@ -8,8 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
     <link rel="stylesheet" href="style.css" >
     <link rel="stylesheet" href="output.css">
     <script src="https://unpkg.com/feather-icons"></script>
@@ -79,19 +77,19 @@
 
     <main>
 
-      <section id="aboutus" class=" bg-green-50 py-12 ">
-        <div class="layar-dalam max-w-screen-lg mx-auto px-6 sm:px-12 md:px-20">
-          <h3 class="text-4xl text-center mb-6 text-lime-950 font-semibold relative">
+      <section id="aboutus" class="bg-gradient-to-b from-lime-800 via-lime-900 to-lime-950 py-12 ">
+        <div class="layar-dalam">
+          <h3 class="text-4xl text-center mb-6 text-green-50 font-semibold relative">
             About Us
+            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 border-b-4 border-green-50 w-24 mt-8"></span>
           </h3>
           
-          <div class="flex flex-col md:flex-row items-center gap-8 mt-8"></div>
-          <p class="ringkasan italic text-lime-800 text-lg px-24 py-8 text-center">
+          <p class="ringkasan italic text-lime-200 text-lg px-24 py-8 text-center">
             Membangun sektor pertanian dan peternakan bersama generasi muda Indonesia
           </p>
           
           <div class="konten-isi">
-            <p class="text-20px leading-relaxed text-justify text-lime-950 px-6 sm:px-8 md:px-12">
+            <p class="text-20px leading-relaxed text-justify text-white px-6 sm:px-8 md:px-12">
               Betawi Muda Farm merupakan wadah yang dimana generasi muda dapat berkembang dan berkreasi dalam sektor pertanian maupun peternakan. 
               Dengan mengembangkan semangat jiwa generasi muda pada sektor Agrikultur yang sangat luas di Indonesia ini dan memanfaatkan setiap potensi yang bisa dikembangkan di Indonesia. 
               Betawi Muda farm juga bukan hanya memberikan informasi tentang agrikultur, kami juga menyediakan layanan, alat maupun jasa untuk membuat kebun anda menjadi lebih maju dan efisien 
@@ -101,10 +99,11 @@
         </div>
       </section>
 
-      <section id="product" class="bg-green-50 pt-16">
+      <section id="product" class="bg-green-950 pt-16">
         <div class="max-w-screen-xl mx-auto px-6">
-            <h3 class="text-4xl text-center mb-6 text-lime-950 font-semibold relative">
+            <h3 class="text-4xl text-center mb-6 text-green-50 font-semibold relative">
                 Product
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 border-b-4  border-green-50 w-14 mt-4"></span>
             </h3>
 
             <!-- Container for horizontal scrolling -->
@@ -233,7 +232,7 @@
                         <img src="asset/tractor.webp" alt="Gambar Produk" class="w-full h-auto my-4">
                         <p class="text-white text-center mb-4">Traktor adalah alat pertanian yang paling sering digunakan untuk melakukan pengolahan tanah.</p>
                         <a href="index1.html">
-                        <button class="px-6 py-2 bg-green-50 text-lime-950 rounded-md hover:bg-green-100 transition duration-300"">
+                        <button class="px-6 py-2 bg-green-50 text-lime-950 rounded-md hover:bg-green-100 transition duration-300">
                             Beli Sekarang
                         </button>
                       </a>
@@ -286,9 +285,9 @@
                   </div>
                   </section>
 
-    <section id="gallery" class="bg-lime-950 scroll-py-10 pb-10 pt-16 z-0">
+    <section id="gallery" class="bg-green-50 scroll-py-10 pb-10 pt-16 z-0">
       <div class="layar-dalam max-w-screen-xl mx-auto px-8">
-        <h3 class="text-4xl text-center text-green-50 font-semibold mb-16">
+        <h3 class="text-4xl text-center text-lime-950 font-semibold mb-16">
           Gallery
          
         
@@ -425,125 +424,121 @@
 </section>
 
 
-  <footer id="contact" class="bg-lime-950 text-white py-10">
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
-      <!-- Logo and Tagline -->
-      <div class="col-span-1">
-        <h2 class="text-2xl font-bold mb-2">Betawi Muda Farm</h2>
-        <p class="text-sm">Membangun sektor pertanian dan peternakan bersama generasi muda Indonesia</p>
-      </div>
-  
-      <!-- Quick Links -->
-      <div class="col-span-1">
-        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-        <ul class="space-y-2">
-          <li><a href="#" class="hover:underline">Home</a></li>
-          <li><a href="#aboutus" class="hover:underline">About Us</a></li>
-          <li><a href="#product" class="hover:underline">Product</a></li>
-          <li><a href="#gallery" class="hover:underline">Gallery</a></li>
-          <li><a href="#blog" class="hover:underline">Blog</a></li>
-         
-        </ul>
-      </div>
-  
-      <!-- Contact Info -->
-     <div class="col-span-1">
-  <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-  <ul class="space-y-2">
-    <li>
-      <a
-        href="https://maps.app.goo.gl/acsEorbkEBMWp3QX7"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-green-600 hover:underline flex items-center"
-      >
-        <i data-feather="map-pin" class="inline-block mr-2"></i>BETAWI MUDA FARM
-      </a>
-    </li>
-    <li><a href="contact.html" 
+<footer id="contact" class="bg-lime-950 text-white py-10"> 
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+    <!-- Logo and Tagline -->
+    <div class="col-span-1">
+      <h2 class="text-2xl font-bold mb-2">Betawi Muda Farm</h2>
+      <p class="text-sm">Membangun sektor pertanian dan peternakan bersama generasi muda Indonesia</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="col-span-1">
+      <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline">Home</a></li>
+        <li><a href="#aboutus" class="hover:underline">About Us</a></li>
+        <li><a href="#product" class="hover:underline">Product</a></li>
+        <li><a href="#gallery" class="hover:underline">Gallery</a></li>
+        <li><a href="#blog" class="hover:underline">Blog</a></li>
+       
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+   <div class="col-span-1">
+<h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+<ul class="space-y-2">
+  <li>
+    <a
+      href="https://maps.app.goo.gl/acsEorbkEBMWp3QX7"
+      target="_blank"
+      rel="noopener noreferrer"
       class="text-green-600 hover:underline flex items-center"
-    ><i data-feather="phone" class="inline-block mr-2"></i>+62 852-8324-1926</a></li>
-    <li>
-      <a href="https://mail.google.com/mail/?view=cm&to=kevinkzmh@gmail.com" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      class="text-green-600 hover:underline flex items-center">
-        <i data-feather="mail" class="inline-block mr-2"></i>BetawiMudaFarm@gmail.com
-      </a>
-    </li>
-    
-  </ul>
+    >
+      <i data-feather="map-pin" class="inline-block mr-2"></i>BETAWI MUDA FARM
+    </a>
+  </li>
+  <li><a href="contact.html" 
+    class="text-green-600 hover:underline flex items-center"
+  ><i data-feather="phone" class="inline-block mr-2"></i>+62 852-8324-1926</a></li>
+  <li>
+    <a href="https://mail.google.com/mail/?view=cm&to=kevinkzmh@gmail.com" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="text-green-600 hover:underline flex items-center">
+      <i data-feather="mail" class="inline-block mr-2"></i>BetawiMudaFarm@gmail.com
+    </a>
+  </li>
+  
+</ul>
 </div>
 
-  
-      <!-- Cek Resi -->
-      <div class="cek-resi col-span-1">
-        <h2 class="text-lg font-semibold mb-4">Cek Resi Pengiriman</h3>
-        <form id="cekResiForm" method="GET" class="space-y-4">
-          <div class="mb-4">
-            <label for="resi" class="block text-sm font-medium">Masukkan Nomor Resi</label>
-            <input type="text" id="resi" name="resi" class="text-black w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Contoh: JNE1234567890" required>
+
+    <!-- Cek Resi -->
+    <div class="cek-resi col-span-1">
+      <h2 class="text-lg font-semibold mb-4">Cek Resi Pengiriman</h3>
+      <form id="cekResiForm" method="GET" class="space-y-4">
+        <div class="mb-4">
+          <label for="resi" class="block text-sm font-medium">Masukkan Nomor Resi</label>
+          <input type="text" id="resi" name="resi" class="text-black w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Contoh: JNE1234567890" required>
+        </div>
+        <div class="mb-4">
+          <label for="courier" class="block text-sm font-medium">Pilih Kurir</label>
+          <select id="courier" name="courier" class="text-black w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <option value="jnt">JNT CARGO</option>
+            <option value="pos">Pos Indonesia</option>
+            <option value="tiki">TIKI</option>
+            <option value="anteraja">AnterAja</option>
+          
+          </select>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition duration-300">
+          Cek Resi
+        </button>
+      </form>
+    </div>
+    <div id="statusModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+      <div class="bg-white rounded-lg w-96 p-6 shadow-xl">
+        <h3 class="text-lime-800 text-lg font-semibold mb-4 text-center text-primary">Status Pengiriman</h3>
+        <div id="resiStatus" class="text-gray-700 space-y-4">
+          <div class="flex justify-between">
+            <span class="font-medium text-sm">Nomor Resi:</span>
+            <span id="resiNumber" class="text-sm text-gray-600"></span>
           </div>
-          <div class="mb-4">
-            <label for="courier" class="block text-sm font-medium">Pilih Kurir</label>
-            <select id="courier" name="courier" class="text-black w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
-              <option value="jnt">JNT CARGO</option>
-              <option value="pos">Pos Indonesia</option>
-              <option value="tiki">TIKI</option>
-              <option value="anteraja">AnterAja</option>
-            
-            </select>
+          <div class="flex justify-between">
+            <span class="font-medium text-sm">Status:</span> 
+            <span id="resiStatusText" class="text-sm text-gray-600"></span>
           </div>
-          <button
-            type="submit"
-            class="w-full bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition duration-300">
-            Cek Resi
-          </button>
-        </form>
-      </div>
-      <div id="statusModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
-        <div class="bg-white rounded-lg w-96 p-6 shadow-xl">
-          <h3 class="text-lime-800 text-lg font-semibold mb-4 text-center text-primary">Status Pengiriman</h3>
-          <div id="resiStatus" class="text-gray-700 space-y-4">
-            <div class="flex justify-between">
-              <span class="font-medium text-sm">Nomor Resi:</span>
-              <span id="resiNumber" class="text-sm text-gray-600"></span>
-            </div>
-            <div class="flex justify-between">
-              <span class="font-medium text-sm">Status:</span> 
-              <span id="resiStatusText" class="text-sm text-gray-600"></span>
-            </div>
-            <div class="flex justify-between">
-              <span class="font-medium text-sm">Tanggal:</span>
-              <span id="resiDate" class="text-sm text-gray-600"></span>
-            </div>
-            <div class="flex justify-between">
-              <span class="font-medium text-sm">Lokasi:</span>
-              <span id="resiLocation" class="text-sm text-gray-600"></span>
-            </div>
+          <div class="flex justify-between">
+            <span class="font-medium text-sm">Tanggal:</span>
+            <span id="resiDate" class="text-sm text-gray-600"></span>
           </div>
-          <div class="flex justify-end mt-4">
-            <button id="closeModal" class="w-full bg-transparent text-lime-800 font-semibold border-4 border-lime-800 p-3 rounded-lg hover:bg-lime-950 hover:text-white transition duration-300">Tutup</button>
+          <div class="flex justify-between">
+            <span class="font-medium text-sm">Lokasi:</span>
+            <span id="resiLocation" class="text-sm text-gray-600"></span>
           </div>
+        </div>
+        <div class="flex justify-end mt-4">
+          <button id="closeModal" class="w-full bg-transparent text-lime-800 font-semibold border-4 border-lime-800 p-3 rounded-lg hover:bg-lime-950 hover:text-white transition duration-300">Tutup</button>
         </div>
       </div>
     </div>
-  
-    <!-- Footer Bottom -->
-    <div class="mt-10 border-t border-gray-700 pt-4 text-center">
-      <div class="flex justify-center space-x-6 mb-4">
-        <a href="#" class="text-white hover:text-gray-400"><i data-feather="facebook"></i></a>
-        <a href="#" class="text-white hover:text-gray-400"><i data-feather="twitter"></i></a>
-        <a href="#" class="text-white hover:text-gray-400"><i data-feather="instagram"></i></a>
-        <a href="#" class="text-white hover:text-gray-400"><i data-feather="linkedin"></i></a>
-      </div>
-      <p class="text-sm">&copy; 2024 Betawi Muda Farm. All Rights Reserved.</p>
-    </div>
-  </footer>
-  
+  </div>
 
-  
-
+ <!-- Footer Bottom -->
+ <div class="mt-10 border-t border-gray-700 pt-4 text-center">
+  <div class="flex justify-center space-x-6 mb-4">
+    <a href="#" class="text-white hover:text-gray-400"><i data-feather="facebook"></i></a>
+    <a href="#" class="text-white hover:text-gray-400"><i data-feather="twitter"></i></a>
+    <a href="#" class="text-white hover:text-gray-400"><i data-feather="instagram"></i></a>
+    <a href="#" class="text-white hover:text-gray-400"><i data-feather="linkedin"></i></a>
+  </div>
+  <p class="text-sm">&copy; 2024 Betawi Muda Farm. All Rights Reserved.</p>
+</div>
+</footer>
 
 <script src="script3.js"></script>   
 <script src="script2.js"></script>     
