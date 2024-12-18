@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         behavior: 'smooth', // Animasi smooth
       });
     });
-  
+
     // Fungsi scroll ke kanan
     scrollRightButton.addEventListener('click', function () {
       productGrid.scrollBy({
