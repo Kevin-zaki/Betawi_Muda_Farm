@@ -157,11 +157,53 @@ billingButton.addEventListener('click', () => {
     // Tampilkan popup
     popupBilling.style.display = 'flex';
 
-    // Fungsi untuk tombl tutup popup
+    // Fungsi untuk tombol tutup popup
     closePopupButton.addEventListener('click', () => {
     popupBilling.style.display = 'none';
 });
-    
+
+billingButton.addEventListener('click', () => {
+    console.log('Tombol Pembayaran diklik!');  // Debugging
+    productList.innerHTML = '';
+    let totalPrice = 0;
+
+    // Cek produk di keranjang
+    if (listCards.every(product => product === null)) {
+        let noProductMessage = document.createElement('li');
+        noProductMessage.innerText = 'Tidak ada produk';
+        noProductMessage.style.color = 'white';
+        noProductMessage.style.backgroundColor = 'red';
+        noProductMessage.style.padding = '5px';
+        noProductMessage.style.borderRadius = '5px';
+        productList.appendChild(noProductMessage);
+
+        // Bagian untuk status pembayaran dan no resi
+        document.getElementById('payment-status').innerText = '-';
+        document.getElementById('courier-status').innerText = '-';
+        document.getElementById('resi-number').innerText = '';
+    } else {
+        // Menampilkan produk yang dibeli dalam popup
+        listCards.forEach((product) => {
+            if (product != null) {
+                let newItem = document.createElement('li');
+                newItem.innerHTML = `${product.name} - ${product.quantity} x Rp ${product.price.toLocaleString()}`;
+                productList.appendChild(newItem);
+                totalPrice += product.price;
+            }
+        });
+
+        // Set status pembayaran dan no resi
+        document.getElementById('payment-status').innerText = 'Lunas';
+        document.getElementById('courier-status').innerText = 'JNT CARGO';
+        document.getElementById('resi-number').innerText = 'JP2255749628';
+    }
+
+    totalPriceElement.innerText = `Rp ${totalPrice.toLocaleString()}`;
+
+    // Tampilkan popup
+    popupBilling.style.display = 'flex';
+});
+
     // Fungsi buat cetak popup (tanpa tombol)
     document.getElementById('print-popup').addEventListener('click', () => {
         // Ambil konten popup tanpa tombol
@@ -214,7 +256,4 @@ function showPurchaseHistory() {
 // untuk bagiann tombol "Simpan" dan "Riwayat"
 document.getElementById('save-button').addEventListener('click', savePurchase);
 document.getElementById('history-button').addEventListener('click', showPurchaseHistory);
-
-
-
 
