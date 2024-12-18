@@ -21,7 +21,7 @@ body {
 
 /* Navigasi */
 nav {
-  background-color: #1a2e05;
+  background-color: #E0E3D4;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   z-index: 100;
   color: black;
@@ -52,11 +52,11 @@ nav a {
   text-decoration: none;
   display: flex;
   align-items: center;
-  color: black;
+  color: #4A4A4A;
 }
 
 nav a:hover {
-  background-color: #f0f0f0;
+  background-color: #6B8E23;
 }
 
 nav li:first-child {
