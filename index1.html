@@ -22,15 +22,45 @@
                 <img src="asset/Betawi Muda.png" alt="BETAWI MUDA FARM" class="logo">
                 <h1 class="title">BETAWI MUDA FARM</h1>
             </a>
+            <button class="alamat" style="background-color: blue; padding: 13px; color: #ffff;">+Tambah Alamat</button>
             <div class="shopping">
                 <img src="asset/shopping_cart_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="Shopping Cart">
                 <span class="quantity">0</span>
             </div>
         </header>
         
+        <!-- BAGIAN UNTUK RIWAYAT TAMBAH ALAMAT -->
+        <div class="tab" style="margin-top: 8px;">
+            <button class="tablinks" onclick="openAlamat(event, 'almt1')">Alamat1</button>
+            <button class="tablinks" onclick="openAlamat(event, 'almt2')">Alamat2</button>
+            <button class="tablinks" onclick="openAlamat(event, 'almt3')">Alamat3</button>
+        </div>
+
+        <div id="almt1" class="tabcontent">
+            <h3>Tes Judul alamat1</h3>
+            <p>lorem</p>
+            <p></p>
+            <button class="hapus-alamat" onclick="hapusAlamat(1)">Hapus Alamat</button>
+            <button class="pilih-alamat">pilih alamat</button>
+        </div>
+        
+        <div id="almt2" class="tabcontent">
+            <h3>Tes Judul alamat2</h3>
+            <p>lorem</p>
+            <button class="hapus-alamat" onclick="hapusAlamat(2)">Hapus Alamat</button>
+            <button class="pilih-alamat">pilih alamat</button>
+        </div>
+        
+        <div id="almt3" class="tabcontent">
+            <h3>Tes Judul alamat3</h3>
+            <p>lorem</p>
+            <button class="hapus-alamat" onclick="hapusAlamat(3)">Hapus Alamat</button>
+            <button class="pilih-alamat">pilih alamat</button>
+        </div>
+
 
         <div class="list">
-          
+        
         </div>
     </div>
 
@@ -40,13 +70,12 @@
             <!-- Daftar produk akan ditambahkan di sini -->
         </ul>
     
-        <!-- Total Harga -->
+
         <div class="total-container text-center mb-6">
             <p class="text-sm font-medium text-gray-500">Total Harga:</p>
             <div class="total text-2xl font-bold text-green-500">0</div>
         </div>
     
-        <!-- Tombol -->
         <div class="flex justify-between gap-4">
             <button class="w-full py-3 px-4 text-white bg-red-500 rounded-md font-medium hover:bg-red-600 transition duration-300 closeShopping">
                 CLOSE
@@ -66,19 +95,71 @@
                 <div><strong>Total Harga: </strong><span id="total-price"></span></div>
                 <div><strong>Status Pembayaran: </strong><span id="payment-status">Lunas</span></div>
                 <div><strong>Jasa Pengiriman: </strong><span id="courier-status">JNT CARGO</span></div>
+                <div><strong>Nama dan Alamat Penerima: </strong><span id="alamat-penerima"></span></div>
                 <div><strong>No Resi: </strong><span id="resi-number">JP2255749628</span></div>
             </div>
             <div class="popup-buttons">
-                <button id="close-popup" style="background-color: red;">Tutup</button>
-                <button id="print-popup" style="background-color: blue;">Print</button>
-                <button id="history-button" style="background-color: rgb(156, 156, 32);">Riwayat</button>
-                <button id="save-button">Simpan</button>
+                <button id="save-button" style="padding: 8px;">Simpan</button>
+                <button id="history-button" style="background-color: blue; padding: 8px;">Riwayat</button>
+                <button id="print-popup" style="background-color: rgb(156, 156, 32); padding: 8px;">Print</button>
+                <button id="hapus-button" style="background-color: rgb(156, 156, 32); padding: 8px;">HapusRiwayat</button>
+                <button id="close-popup" style="background-color: red; padding: 8px;">Tutup</button>
             </div>
         </div>
     </div>
     
+    <!-- Bagian Popup Tambah Alamat -->
+    <div id="popup-alamat" class="popup-overlay hidden">
+        <div class="popup-container bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto relative">
+            <h2 class="text-2xl font-bold mb-4 text-center">Tambah Alamat</h2>
+            <form id="alamat-form" class="space-y-4">
+                <input type="text" placeholder="Nama" id="input-nama" class="input-field">
+                <!-- <input type="text" placeholder="Alamat" id="input-alamat" class="input-field"> -->
+                <textarea name="" placeholder="Alamat" id="input-alamat" class="input-field"></textarea>
+                <input type="number" placeholder="Nomor Telepon" id="input-telp" class="input-field">
+
+                <select id="input-provinsi" class="input-field">
+                    <option value="">Pilih Provinsi</option>
+                    <option value="JawaBarat">Jawa Barat</option>
+                    <option value="JawaTengah">Jawa Tengah</option>
+                    <option value="JawaTimur">Jawa Timur</option>
+                </select>
+
+                <select id="input-kota" class="input-field">
+                    <option value="">Pilih Kota</option>
+                    <option value="KotaBekasi">Kota Bekasi</option>
+                    <option value="KotaBogor">Kota Bogor</option>
+                    <option value="KotaBandung">Kota Bandung</option>
+                    <option value="TasikMalaya">Tasik Malaya</option>
+                </select>
+
+                <select id="input-kecamatan" class="input-field">
+                    <option value="">Pilih Kecamatan</option>
+                    <option value="BantarGebang">Bantar Gebang</option>
+                    <option value="JatiAsih">Jati Asih</option>
+                    <option value="MustikaJaya">Mustika Jaya</option>
+                    <option value="RawaLumbu">Rawa Lumbu</option>
+                </select>
+
+                <select id="input-kodepos" class="input-field">
+                    <option value="">Pilih Kodepos</option>
+                    <option value="17116">17116</option>
+                    <option value="17115">17115</option>
+                    <option value="17117">17117</option>
+                </select>
+
+                <div class="flex justify-between mt-4">
+                    <button type="button" id="close-popup-alamat" class="bg-red-500 text-white px-4 py-2 rounded-md">Batal</button>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
 
+
+
+    <!-- <script src="almt.js"></script> -->
     <script src="script3.js"></script>
 </body>
 </html>
