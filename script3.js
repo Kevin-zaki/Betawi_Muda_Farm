@@ -352,7 +352,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <button class="pilih-alamat" onclick="pilihAlamat(${i})">pilih Alamat</button>
                 `;
             } else {
-                tabContent.innerHTML = "<p>Alamat-Nya belum di tambahin cuyy</p>";
+                tabContent.innerHTML = "<p>Input Alamat</p>";
             }
         }
     }
