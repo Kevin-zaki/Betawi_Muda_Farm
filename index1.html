@@ -14,15 +14,19 @@
     <link rel="stylesheet" href="style.css" >
     <link rel="stylesheet" href="output.css">
 </head>
-<body class="">
+<body class="bg-[#f5f5f4] min-h-screen text-[#393716]">
     
     <div class="container">
-        <header>
+        <header class="bg-[#e2dfca]">
             <a href="index.html" class="brand">
                 <img src="asset/Betawi Muda.png" alt="BETAWI MUDA FARM" class="logo">
                 <h1 class="title">BETAWI MUDA FARM</h1>
             </a>
-            <button class="alamat" style="background-color: blue; padding: 13px; color: #ffff;">+Tambah Alamat</button>
+            <!-- Tombol untuk membuka popup -->
+            <button id="btnTambahAlamat" class="bg-lime-950 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-md">
+                Tambah Alamat
+            </button>
+  
             <div class="shopping">
                 <img src="asset/shopping_cart_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="Shopping Cart">
                 <span class="quantity">0</span>
@@ -30,41 +34,41 @@
         </header>
         
         <!-- BAGIAN UNTUK RIWAYAT TAMBAH ALAMAT -->
-        <div class="tab" style="margin-top: 8px;">
-            <button class="tablinks" onclick="openAlamat(event, 'almt1')">Alamat1</button>
-            <button class="tablinks" onclick="openAlamat(event, 'almt2')">Alamat2</button>
-            <button class="tablinks" onclick="openAlamat(event, 'almt3')">Alamat3</button>
+        <div class="tab bg-[#e2dfca]" style="margin-top: 8px;">
+            <button class="tablinks font-bold " onclick="openAlamat(event, 'almt1')">Alamat 1</button>
+            <button class="tablinks font-bold " onclick="openAlamat(event, 'almt2')">Alamat 2</button>
+            <button class="tablinks font-bold " onclick="openAlamat(event, 'almt3')">Alamat 3</button>
         </div>
 
         <div id="almt1" class="tabcontent">
             <h3>Tes Judul alamat1</h3>
             <p>lorem</p>
-            <p></p>
-            <button class="hapus-alamat" onclick="hapusAlamat(1)">Hapus Alamat</button>
-            <button class="pilih-alamat">pilih alamat</button>
+            <button class="hapus-alamat" onclick="hapusAlamat(0)">Hapus Alamat</button>
+            <button class="pilih-alamat">Pilih Alamat</button>
         </div>
         
         <div id="almt2" class="tabcontent">
             <h3>Tes Judul alamat2</h3>
             <p>lorem</p>
-            <button class="hapus-alamat" onclick="hapusAlamat(2)">Hapus Alamat</button>
-            <button class="pilih-alamat">pilih alamat</button>
+            <button class="hapus-alamat" onclick="hapusAlamat(1)">Hapus Alamat</button>
+            <button class="pilih-alamat">Pilih Alamat</button>
         </div>
         
         <div id="almt3" class="tabcontent">
             <h3>Tes Judul alamat3</h3>
             <p>lorem</p>
-            <button class="hapus-alamat" onclick="hapusAlamat(3)">Hapus Alamat</button>
-            <button class="pilih-alamat">pilih alamat</button>
+            <button class="hapus-alamat" onclick="hapusAlamat(2)">Hapus Alamat</button>
+            <button class="pilih-alamat">Pilih Alamat</button>
         </div>
 
+        <p id="alamat-penerima" class="text-red-500 font-bold">Alamat Penerima Belum Dipilih</p> 
 
         <div class="list">
-        
+           
         </div>
     </div>
 
-    <div class="card bg-white shadow-lg rounded-lg p-6 mx-auto max-w-md">
+    <div class="card bg-[#e2dfca] shadow-black rounded-lg p-6 mx-auto max-w-md">
         <h1 class="text-2xl font-bold text-center mb-4">PRODUCT</h1>
         <ul class="listCard space-y-2 mb-6">
             <!-- Daftar produk akan ditambahkan di sini -->
@@ -86,8 +90,8 @@
         </div>        
     
        <!-- Bagian Popup Billing -->
-       <div class="popup-billing" id="popup-billing" style="display: none;">
-        <div class="popup-content">
+       <div class="popup-billing  bg-black bg-opacity-50" id="popup-billing" style="display: none;">
+        <div class="popup-content bg-[#e2dfca]">
             <h2>Detail Pembelian</h2>
             <ul id="product-list"></ul>
             <span>==========================</span>
@@ -98,63 +102,63 @@
                 <div><strong>Nama dan Alamat Penerima: </strong><span id="alamat-penerima"></span></div>
                 <div><strong>No Resi: </strong><span id="resi-number">JP2255749628</span></div>
             </div>
-            <div class="popup-buttons">
+            <div class="popup-buttons bg-[#e2dfca]">
                 <button id="save-button" style="padding: 8px;">Simpan</button>
                 <button id="history-button" style="background-color: blue; padding: 8px;">Riwayat</button>
-                <button id="print-popup" style="background-color: rgb(156, 156, 32); padding: 8px;">Print</button>
-                <button id="hapus-button" style="background-color: rgb(156, 156, 32); padding: 8px;">HapusRiwayat</button>
+                <button id="print-popup" style="background-color: rgb(32, 156, 32); padding: 8px;">Print</button>
+                <button id="hapus-button" style="background-color: rgb(156, 156, 32); padding: 8px;">Hapus Riwayat</button>
                 <button id="close-popup" style="background-color: red; padding: 8px;">Tutup</button>
             </div>
         </div>
     </div>
     
     <!-- Bagian Popup Tambah Alamat -->
-    <div id="popup-alamat" class="popup-overlay hidden">
-        <div class="popup-container bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto relative">
-            <h2 class="text-2xl font-bold mb-4 text-center">Tambah Alamat</h2>
-            <form id="alamat-form" class="space-y-4">
-                <input type="text" placeholder="Nama" id="input-nama" class="input-field">
-                <!-- <input type="text" placeholder="Alamat" id="input-alamat" class="input-field"> -->
-                <textarea name="" placeholder="Alamat" id="input-alamat" class="input-field"></textarea>
-                <input type="number" placeholder="Nomor Telepon" id="input-telp" class="input-field">
+<div id="popup-alamat" class="popup-overlay hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+    <div class="popup-container bg-[#e2dfca] shadow-black rounded-lg p-6 max-w-md mx-auto relative">
+        <h2 class="text-2xl font-bold mb-4 text-center">Tambah Alamat</h2>
+        <form id="alamat-form" class="space-y-4">
+            <input type="text" placeholder="Nama" id="input-nama" class="input-field w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <textarea placeholder="Alamat" id="input-alamat" class="input-field w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            <input type="number" placeholder="Nomor Telepon" id="input-telp" class="input-field w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
 
-                <select id="input-provinsi" class="input-field">
-                    <option value="">Pilih Provinsi</option>
-                    <option value="JawaBarat">Jawa Barat</option>
-                    <option value="JawaTengah">Jawa Tengah</option>
-                    <option value="JawaTimur">Jawa Timur</option>
-                </select>
+            <select id="input-provinsi" class="input-field w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="">Pilih Provinsi</option>
+                <option value="JawaBarat">Jawa Barat</option>
+                <option value="JawaTengah">Jawa Tengah</option>
+                <option value="JawaTimur">Jawa Timur</option>
+            </select>
 
-                <select id="input-kota" class="input-field">
-                    <option value="">Pilih Kota</option>
-                    <option value="KotaBekasi">Kota Bekasi</option>
-                    <option value="KotaBogor">Kota Bogor</option>
-                    <option value="KotaBandung">Kota Bandung</option>
-                    <option value="TasikMalaya">Tasik Malaya</option>
-                </select>
+            <select id="input-kota" class="input-field w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="">Pilih Kota</option>
+                <option value="KotaBekasi">Kota Bekasi</option>
+                <option value="KotaBogor">Kota Bogor</option>
+                <option value="KotaBandung">Kota Bandung</option>
+                <option value="TasikMalaya">Tasik Malaya</option>
+            </select>
 
-                <select id="input-kecamatan" class="input-field">
-                    <option value="">Pilih Kecamatan</option>
-                    <option value="BantarGebang">Bantar Gebang</option>
-                    <option value="JatiAsih">Jati Asih</option>
-                    <option value="MustikaJaya">Mustika Jaya</option>
-                    <option value="RawaLumbu">Rawa Lumbu</option>
-                </select>
+            <select id="input-kecamatan" class="input-field w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="">Pilih Kecamatan</option>
+                <option value="BantarGebang">Bantar Gebang</option>
+                <option value="JatiAsih">Jati Asih</option>
+                <option value="MustikaJaya">Mustika Jaya</option>
+                <option value="RawaLumbu">Rawa Lumbu</option>
+            </select>
 
-                <select id="input-kodepos" class="input-field">
-                    <option value="">Pilih Kodepos</option>
-                    <option value="17116">17116</option>
-                    <option value="17115">17115</option>
-                    <option value="17117">17117</option>
-                </select>
+            <select id="input-kodepos" class="input-field w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="">Pilih Kodepos</option>
+                <option value="17116">17116</option>
+                <option value="17115">17115</option>
+                <option value="17117">17117</option>
+            </select>
 
-                <div class="flex justify-between mt-4">
-                    <button type="button" id="close-popup-alamat" class="bg-red-500 text-white px-4 py-2 rounded-md">Batal</button>
-                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Simpan</button>
-                </div>
-            </form>
-        </div>
+            <div class="flex justify-between mt-4">
+                <button type="button" id="close-popup-alamat" class="bg-red-500 text-white px-4 py-2 rounded-md">Batal</button>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Simpan</button>
+            </div>
+        </form>
     </div>
+</div>
+
 
 
 

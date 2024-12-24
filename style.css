@@ -504,6 +504,10 @@ background-color: #45a049;
   background-color: #0056b3;
 }
 
+#hapus-button {
+  background-color: #333;
+  color: white;
+}
 /* Responsiveness */
 @media (max-width: 768px) {
   .popup-content {
@@ -524,6 +528,11 @@ background-color: #45a049;
 
   button {
       font-size: 11px;
+  }
+
+  #close-popup {
+    border-radius: 8px;
+    font-size: 13px; /* Ukuran font tombol disesuaikan */
   }
 }
 /* bagian popuphistory */
@@ -765,4 +774,6 @@ header .brand .title {
       width: 24px;
       height: 24px;
   }
+
 }
+
