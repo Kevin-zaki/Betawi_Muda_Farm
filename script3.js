@@ -274,106 +274,101 @@ document.getElementById('history-button').addEventListener('click', showPurchase
 
 // Bagian Tambah Alamat
 
-  const btnTambahAlamat = document.getElementById('btnTambahAlamat'); // Tombol untuk membuka popup
-  const popupAlamat = document.getElementById('popup-alamat'); // Popup untuk menambah alamat
-  const btnClosePopup = document.getElementById('close-popup-alamat'); // Tombol Batal untuk menutup popup
-  const alamatForm = document.getElementById('alamat-form'); // Form di dalam popup
-  
-  // Menampilkan popup ketika tombol "Tambah Alamat" diklik
-  btnTambahAlamat.addEventListener('click', function() {
-    popupAlamat.classList.remove('hidden'); // Menampilkan popup
-  });
+document.addEventListener("DOMContentLoaded", function () {
+    const tambahAlamatBtn = document.querySelector(".alamat");
+    const popupAlamat = document.getElementById("popup-alamat");
+    const closePopupBtn = document.getElementById("close-popup-alamat");
+    const alamatForm = document.getElementById("alamat-form");
 
-  // Menutup popup ketika tombol "Batal" diklik
-  btnClosePopup.addEventListener('click', function() {
-    popupAlamat.classList.add('hidden'); // Menyembunyikan popup
-  });
+    let alamatData = JSON.parse(localStorage.getItem("alamatData")) || []; // Ambil data dari Local Storage
 
-  // Menutup popup ketika klik di luar popup
-  window.addEventListener('click', function(event) {
-    if (event.target === popupAlamat) {
-      popupAlamat.classList.add('hidden'); // Menyembunyikan popup
-    }
-  });
-
-  document.getElementById('alamat-form').addEventListener('submit', function (e) {
-    e.preventDefault(); // Mencegah reload halaman saat submit form
-    
-    const nama = document.getElementById('input-nama').value;
-    const alamat = document.getElementById('input-alamat').value;
-    const telp = document.getElementById('input-telp').value;
-    const provinsi = document.getElementById('input-provinsi').value;
-    const kota = document.getElementById('input-kota').value;
-    const kecamatan = document.getElementById('input-kecamatan').value;
-    const kodepos = document.getElementById('input-kodepos').value;
-
-    const newAlamat = {
-        nama,
-        alamat,
-        telp,
-        provinsi,
-        kota,
-        kecamatan,
-        kodepos,
-    };
-
-    // Menambahkan alamat baru ke array alamatData
-    document.addEventListener("DOMContentLoaded", function () {
-        let alamatData = JSON.parse(localStorage.getItem("alamatData")) || [];
-        tampilkanDataAlamat(); // Memperbarui tampilan saat halaman dimuat
+    // Menampilkan popup Tambah Alamat
+    tambahAlamatBtn.addEventListener("click", () => {
+        popupAlamat.classList.remove("hidden");
     });
-    
-    alamatData.push(newAlamat);
-    localStorage.setItem('alamatData', JSON.stringify(alamatData)); // Simpan ke localStorage
 
-    tampilkanDataAlamat(); // Memperbarui tampilan alamat
+    closePopupBtn.addEventListener("click", () => {
+        popupAlamat.classList.add("hidden");
+    });
 
-    // Menutup pop-up setelah alamat ditambahkan
-    document.getElementById('popup-alamat').classList.add('hidden');
-});
+    // Menyimpan data alamat
+    alamatForm.addEventListener("submit", function (e) {
+        e.preventDefault();
 
+        // Ambil nilai input
+        const nama = document.getElementById("input-nama").value;
+        const alamat = document.getElementById("input-alamat").value;
+        const telp = document.getElementById("input-telp").value;
+        const provinsi = document.getElementById("input-provinsi").value;
+        const kota = document.getElementById("input-kota").value;
+        const kecamatan = document.getElementById("input-kecamatan").value;
+        const kodepos = document.getElementById("input-kodepos").value;
 
-    // Variabel alamatData menyimpan daftar alamat
-let alamatData = JSON.parse(localStorage.getItem("alamatData")) || [];
+        // Buat objek alamat
+        const alamatBaru = {
+            nama,
+            alamat,
+            telp,
+            provinsi,
+            kota,
+            kecamatan,
+            kodepos
+        };
 
-function tampilkanDataAlamat() {
-    for (let i = 0; i < 3; i++) {
-        const tabContent = document.getElementById(`almt${i + 1}`);
-        const alamat = alamatData[i]; // Ambil alamat berdasarkan index
+        // Simpan data ke array
+        alamatData.push(alamatBaru);
 
-        if (alamat) {
-            tabContent.innerHTML = `
-                <h1><strong>Alamat Kamu: ${i + 1}</strong></h1>
-                <p><strong>Nama:</strong> ${alamat.nama}</p>
-                <p><strong>Alamat:</strong> ${alamat.alamat}</p>
-                <p><strong>Telepon:</strong> ${alamat.telp}</p>
-                <p><strong>Provinsi:</strong> ${alamat.provinsi}</p>
-                <p><strong>Kota:</strong> ${alamat.kota}</p>
-                <p><strong>Kecamatan:</strong> ${alamat.kecamatan}</p>
-                <p><strong>Kode Pos:</strong> ${alamat.kodepos}</p>
-                <button class="hapus-alamat" onclick="hapusAlamat(${i})">Hapus Alamat</button>
-                <button class="pilih-alamat" onclick="pilihAlamat(${i})">Pilih Alamat</button>
-            `;
-        } else {
-            tabContent.innerHTML = "<p>Input Alamat</p>";
+        // Simpan ke Local Storage
+        localStorage.setItem("alamatData", JSON.stringify(alamatData));
+
+        // Tampilkan data di tab
+        tampilkanDataAlamat();
+
+        // Reset form dan tutup popup
+        alamatForm.reset();
+        popupAlamat.classList.add("hidden");
+
+        alert("Alamat berhasil disimpan!");
+    });
+
+    // Fungsi menampilkan data alamat di tab
+    function tampilkanDataAlamat() {
+        for (let i = 0; i < 3; i++) { // Maksimal 3 alamat, Lebih dari 3 tidak bisa tidak di ikut sertakan
+            const tabContent = document.getElementById(`almt${i + 1}`);
+            const alamat = alamatData[i];
+
+            if (alamat) {
+                tabContent.innerHTML = `
+                    <h1><strong>Alamat Kamu : ${i + 1}</strong></h1>
+                    <br/>
+                    <p><strong>Nama:</strong><span1>${alamat.nama}</span1></p>
+                    <p><strong>Alamat:</strong><span2>${alamat.alamat}</span2> </p>
+                    <p><strong>Telepon:</strong> ${alamat.telp}</p>
+                    <p><strong>Provinsi:</strong> ${alamat.provinsi}</p>
+                    <p><strong>Kota:</strong> ${alamat.kota}</p>
+                    <p><strong>Kecamatan:</strong> ${alamat.kecamatan}</p>
+                    <p><strong>Kode Pos:</strong> ${alamat.kodepos}</p>
+                    <button class="hapus-alamat" onclick="hapusAlamat(${i})">Hapus Alamat</button> <!-- Tombol hapus alamat -->
+                    <button class="pilih-alamat" onclick="pilihAlamat(${i})">pilih Alamat</button>
+                `;
+            } else {
+                tabContent.innerHTML = "<p>Masukan Alamat</p>";
+            }
         }
     }
-}
-
-    // Fungsi untuk menghapus alamat
-function hapusAlamat(index) {
-    if (confirm("Apakah Anda yakin ingin menghapus alamat ini?")) {
-        alamatData.splice(index, 1); // Hapus alamat pada index
-        localStorage.setItem("alamatData", JSON.stringify(alamatData)); // Simpan data terbaru
-        tampilkanDataAlamat(); // Perbarui tampilan alamat
-        alert("Alamat telah dihapus!");
+     // Fungsi Code yang dibawah buat menghapus alamat berdasarkan index
+     window.hapusAlamat = function (index) {
+        if (confirm("Apakah Anda yakin ingin menghapus alamat ini?")) {
+            alamatData.splice(index, 1); 
+            localStorage.setItem("alamatData", JSON.stringify(alamatData)); 
+            tampilkanDataAlamat(); 
+            alert("Alamat telah dihapus!");
+        }
     }
-}
-
     
     // Load data alamat saat halaman mau muncul
     tampilkanDataAlamat();
-
+});
 
 
 
@@ -389,12 +384,12 @@ function openAlamat(evt, alamatID) {
 
     // Hapus class active dari semua tablinks
     tablinks.forEach((link) => {
-        link.classList.remove("active");
+        link.className = link.className.replace(" active", "");
     });
 
     // Tampilkan tab yang diklik
     document.getElementById(alamatID).style.display = "block";
-    evt.currentTarget.classList.add("active");
+    evt.currentTarget.className += " active";
 }
 
 // Bagian TABS alamat
@@ -440,29 +435,28 @@ function openAlamat(evt, alamatID) {
 }
 
 
-// Fungsi untuk memilih alamat
-function pilihAlamat(index) {
-    const alamat = alamatData[index];
-    const alamatPenerimaElem = document.querySelector("#alamat-penerima");
+// DIbawah ini untuk , ketika user mengeklik tombol PILIH ALAMAT
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".pilih-alamat").forEach((button) => {
+        button.addEventListener("click", function () {
+            const tabContent = button.closest(".tabcontent");
+            const span1Element = tabContent.querySelector("span1");
+            const span2Element = tabContent.querySelector("span2");
+            const span1Text = span1Element ? span1Element.textContent.trim() : "";
+            const span2Text = span2Element ? span2Element.textContent.trim() : "";
+            const alamat = span1Text + ", " + span2Text;
+            const alamatPenerimaElem = document.querySelector("#alamat-penerima"); 
 
-    if (alamatPenerimaElem) {
-        alamatPenerimaElem.textContent = `${alamat.nama}, ${alamat.alamat}, ${alamat.kota}, ${alamat.provinsi}, ${alamat.kodepos}`;
-        alert(`Alamat "${alamat.alamat}" telah dipilih.`);
-    } else {
-        console.error("Elemen 'Alamat Penerima' tidak ditemukan.");
-    }
-}
+            if (alamatPenerimaElem) {
+                alamatPenerimaElem.textContent = alamat || "Alamat tidak ditemukan"; 
+                alert(`Alamat "${alamat}" telah dipilih.`);
+            } else {
+                console.error("Elemen 'Alamat Penerima' tidak ditemukan.");
+            }
+        });
+    });
+})
 
-
-// Contoh validasi sebelum menyimpan
-document.getElementById('simpan-button').addEventListener('click', function() {
-    const alamatPenerimaElem = document.querySelector("#alamat-penerima");
-    if (alamatPenerimaElem && alamatPenerimaElem.textContent === "Alamat Penerima belum dipilih") {
-        alert("Harap pilih alamat terlebih dahulu.");
-    } else {
-        // Proses simpan data
-    }
-});
 
 // untuk validasi ketika menyimpan jika user belom melakukan pilih alamat , saya gabungkan di baris kode 223
 
