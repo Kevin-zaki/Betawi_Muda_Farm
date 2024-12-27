@@ -6,6 +6,8 @@ module.exports = {
       fontFamily: {
         'Sans': ['Poppins', 'sans-serif'],
         'serif' : ['Merriweather', 'serif'],
+        'playfair': ['Playfair Display', 'serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
       },
     },
   },
