@@ -17,21 +17,31 @@
 <body class="bg-[#f5f5f4] min-h-screen text-[#393716]">
     
     <div class="container">
-        <header class="bg-[#e2dfca]">
-            <a href="index.html" class="brand">
-                <img src="asset/Betawi Muda.png" alt="BETAWI MUDA FARM" class="logo">
-                <h1 class="title">BETAWI MUDA FARM</h1>
+        <header class="bg-[#e2dfca] flex items-center justify-between p-4 sm:p-6">
+            <!-- Brand Logo dan Title -->
+            <a href="index.html" class="brand flex items-center space-x-2">
+                <img src="asset/Betawi_Muda-removebg-preview.png" alt="BETAWI MUDA FARM" class="logo w-16 sm:w-12 md:w-10">
+                <h1 class="title text-lg sm:text-base md:text-xs font-bold text-lime-950">BETAWI MUDA FARM</h1>
             </a>
-            <!-- Tombol untuk membuka popup -->
-            <button class="alamat bg-lime-950 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-md">
+            
+            
+            
+            <!-- Tombol Tambah Alamat -->
+            <button class="alamat bg-lime-950 hover:bg-green-600 text-white font-bold py-2 px-4 sm:px-3 sm:py-2 md:px-2 md:py-1 rounded-md text-sm">
                 Tambah Alamat
             </button>
-  
-            <div class="shopping">
-                <img src="asset/shopping_cart_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="Shopping Cart">
-                <span class="quantity">0</span>
+          
+            <!-- Shopping Cart -->
+            <div class="shopping flex items-center space-x-1">
+                <img src="asset/shopping_cart_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="Shopping Cart" class="w-6 sm:w-5 md:w-4">
+                <span class="quantity bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs sm:text-[10px] md:text-[8px]">
+                    0
+                </span>
             </div>
         </header>
+        
+        
+        
         
         <!-- BAGIAN UNTUK RIWAYAT TAMBAH ALAMAT -->
         <div class="tab bg-[#e2dfca]" style="margin-top: 8px;">
