@@ -401,6 +401,24 @@ color: #3D5300;
   animation: popup-show 0.3s ease-out;
 }
 
+.popup-billing .popup-content .info {
+  background-color: #0056b3;
+  height: 280px;
+  overflow-y: auto;
+  border: 1px solid #d0d0d0;
+  background-color: #f9f9f9;
+  padding: 5px;
+}
+
+.popup-billing .popup-content .produk_list {
+  background-color: #0056b3;
+  height: 100px;
+  overflow-y: auto;
+  border: 1px solid #d0d0d0;
+  background-color: #f9f9f9;
+  padding: 5px;
+}
+
 @keyframes popup-show {
   from {
       transform: scale(0.9);
@@ -565,7 +583,7 @@ background-color: #45a049;
 }
 
 .popup-history .popup-content {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
   width: 80%;
@@ -819,3 +837,90 @@ header .brand .title {
 
 }
 
+/* Bagian Responsive Hp di Popup-Billing */
+@media (max-width: 410px){
+  .popup-billing .popup-buttons {
+    /* background-color: #0eb582; */
+    width: 100%;
+  }
+  .popup-billing .popup-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 1px;
+    height: 50px;
+    width: 19%;
+  
+  }
+}
+
+@media (max-width: 480px){
+  .popup-billing .popup-buttons {
+    width: 100%;
+  }
+  .popup-billing .popup-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 1px;
+    height: 50px;
+    width: 19%;
+  
+  }
+}
+
+@media (max-width: 320px) {
+  .container .bar_1 a {
+    width: 50%;
+    font-size: 8px;
+  }
+
+  .container .bar_1 a h1 {
+    font-size: 8px;
+    margin: 0%;
+    font-weight: 100;
+    margin-right: 2px;
+    padding: 5px;
+  }
+
+}
+
+@media (max-width: 340px) {
+  .bar .logo span {
+    font-size: 9.4px;
+    font-weight: bold;
+  }
+
+  .container .bar_1 a {
+    width: 50%;
+    font-size: 10px;
+  }
+
+  .container .bar_1 a h1 {
+    font-size: 12px;
+    margin: 0%;
+    font-weight: 600;
+  }
+
+  .container .tab {
+    display: flex;
+    gap: 3px;
+    height: 65px;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .container .bar_1 a {
+    width: 50%;
+    font-size: 10px;
+  }
+
+  .container .bar_1 a h1 {
+    font-size: 12px;
+    margin: 0%;
+    font-weight: 600;
+  }
+}
