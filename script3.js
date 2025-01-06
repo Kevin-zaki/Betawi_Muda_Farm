@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const closePopupBtn = document.getElementById("close-popup-alamat");
     const alamatForm = document.getElementById("alamat-form");
 
-    let alamatData = JSON.parse(localStorage.getItem("alamatData")) || []; // Ambil data dari Local Storage
+    let alamatData = JSON.parse(localStorage.getItem("alamatData")) || []; 
 
     // Menampilkan popup Tambah Alamat
     tambahAlamatBtn.addEventListener("click", () => {
@@ -329,6 +329,7 @@ document.addEventListener("DOMContentLoaded", function () {
         popupAlamat.classList.add("hidden");
 
         alert("Alamat berhasil disimpan!");
+        location.reload();
     });
 
     // Fungsi menampilkan data alamat di tab
@@ -352,7 +353,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <button class="pilih-alamat" onclick="pilihAlamat(${i})">pilih Alamat</button>
                 `;
             } else {
-                tabContent.innerHTML = "<p>Alamat-Nya belum di tambahin cuyy</p>";
+                tabContent.innerHTML = "<p>Masukan Alamat</p>";
             }
         }
     }

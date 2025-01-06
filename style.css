@@ -14,14 +14,14 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   
 }
 
 
 /* Navigasi */
 nav {
-  background-color: #1a2e05;
+  background-color: #e2dfca;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   z-index: 100;
   color: black;
@@ -44,6 +44,7 @@ nav ul {
 
 nav li {
   height: 50px;
+
 }
 
 nav a {
@@ -52,11 +53,11 @@ nav a {
   text-decoration: none;
   display: flex;
   align-items: center;
-  color: black;
+  color: #393716;
 }
 
 nav a:hover {
-  background-color: #f0f0f0;
+  background-color: #c3c9a9;
 }
 
 nav li:first-child {
@@ -166,14 +167,14 @@ color: inherit;
 }
 
 header .brand .logo {
-width: 60px; /* Default logo size */
+width: 100px; /* Default logo size */
 height: auto;
 margin-right: 10px;
 transition: all 0.3s ease;
 }
 
 header .brand .title {
-font-size: 1.5rem;
+font-size: 1.8rem;
 font-weight: bold;
 color: #333;
 white-space: nowrap;
@@ -184,8 +185,8 @@ header .shopping {
 position: fixed;
 bottom: 20px;
 right: 20px;
-width: 60px;
-height: 60px;
+width: 80px;
+height: 80px;
 background-color: #FF5722;
 border-radius: 50%;
 display: flex;
@@ -197,8 +198,8 @@ z-index: 1000;
 }
 
 header .shopping img {
-width: 30px;
-height: 30px;
+width: 32px;
+height: 32px;
 }
 
 header .shopping span {
@@ -400,6 +401,24 @@ color: #3D5300;
   animation: popup-show 0.3s ease-out;
 }
 
+.popup-billing .popup-content .info {
+  background-color: #0056b3;
+  height: 280px;
+  overflow-y: auto;
+  border: 1px solid #d0d0d0;
+  background-color: #f9f9f9;
+  padding: 5px;
+}
+
+.popup-billing .popup-content .produk_list {
+  background-color: #0056b3;
+  height: 100px;
+  overflow-y: auto;
+  border: 1px solid #d0d0d0;
+  background-color: #f9f9f9;
+  padding: 5px;
+}
+
 @keyframes popup-show {
   from {
       transform: scale(0.9);
@@ -503,6 +522,10 @@ background-color: #45a049;
   background-color: #0056b3;
 }
 
+#hapus-button {
+  background-color: #333;
+  color: white;
+}
 /* Responsiveness */
 @media (max-width: 768px) {
   .popup-content {
@@ -524,6 +547,26 @@ background-color: #45a049;
   button {
       font-size: 11px;
   }
+
+  #close-popup {
+    border-radius: 8px;
+    font-size: 13px; /* Ukuran font tombol disesuaikan */
+  }
+}
+@media (max-width: 320px) {
+  .popup-content {
+      width: 100%; /* Pop-up memenuhi layar */
+      padding: 10px; /* Padding minimal */
+  }
+
+  button {
+      font-size: 10px; /* Ukuran font tombol paling kecil */
+      padding: 8px; /* Padding minimal untuk tombol */
+  }
+
+  #close-popup {
+      font-size: 12px; /* Tombol close tetap terlihat dengan ukuran kecil */
+  }
 }
 /* bagian popuphistory */
 /* Popup Riwayat Pembelian */
@@ -540,7 +583,7 @@ background-color: #45a049;
 }
 
 .popup-history .popup-content {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
   width: 80%;
@@ -680,6 +723,15 @@ margin-bottom: 40px;
 
 
 /* Responsiveness */
+@media (max-width: 1024px) {
+  .list .item img {
+      height: 300px; /* Tinggi gambar untuk laptop */
+  }
+
+  .card {
+      max-width: 80%; /* Lebar card lebih besar pada laptop */
+  }
+}
 @media (max-width: 768px) {
 .list .item img {
   height: 200px;
@@ -688,7 +740,25 @@ margin-bottom: 40px;
 .card {
   max-width: 100%;
 }
+@media (max-width: 480px) {
+  .list .item img {
+      height: 150px; /* Tinggi gambar lebih kecil untuk mobile landscape */
+  }
 
+  .card {
+      max-width: 95%; /* Card hampir memenuhi layar */
+  }
+}
+@media (max-width: 320px) {
+  .list .item img {
+      height: 120px; /* Tinggi gambar lebih kecil untuk layar kecil */
+  }
+
+  .card {
+      max-width: 100%; /* Card memenuhi layar */
+      padding: 10px; /* Tambahkan padding agar tidak terlalu menempel */
+  }
+}
 .card .checkOut, .card .billing {
   width: 100%; 
   height: 56px; 
@@ -763,5 +833,94 @@ header .brand .title {
   header .shopping img {
       width: 24px;
       height: 24px;
+  }
+
+}
+
+/* Bagian Responsive Hp di Popup-Billing */
+@media (max-width: 410px){
+  .popup-billing .popup-buttons {
+    /* background-color: #0eb582; */
+    width: 100%;
+  }
+  .popup-billing .popup-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 1px;
+    height: 50px;
+    width: 19%;
+  
+  }
+}
+
+@media (max-width: 480px){
+  .popup-billing .popup-buttons {
+    width: 100%;
+  }
+  .popup-billing .popup-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 1px;
+    height: 50px;
+    width: 19%;
+  
+  }
+}
+
+@media (max-width: 320px) {
+  .container .bar_1 a {
+    width: 50%;
+    font-size: 8px;
+  }
+
+  .container .bar_1 a h1 {
+    font-size: 8px;
+    margin: 0%;
+    font-weight: 100;
+    margin-right: 2px;
+    padding: 5px;
+  }
+
+}
+
+@media (max-width: 340px) {
+  .bar .logo span {
+    font-size: 9.4px;
+    font-weight: bold;
+  }
+
+  .container .bar_1 a {
+    width: 50%;
+    font-size: 10px;
+  }
+
+  .container .bar_1 a h1 {
+    font-size: 12px;
+    margin: 0%;
+    font-weight: 600;
+  }
+
+  .container .tab {
+    display: flex;
+    gap: 3px;
+    height: 65px;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .container .bar_1 a {
+    width: 50%;
+    font-size: 10px;
+  }
+
+  .container .bar_1 a h1 {
+    font-size: 12px;
+    margin: 0%;
+    font-weight: 600;
   }
 }
